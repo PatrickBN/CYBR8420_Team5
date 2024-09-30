@@ -4,6 +4,9 @@
 Description:
 Each employee has access to a password manager and secrets manager that will enable them to have assurance when they log into their accounts and submit code using their accounts that they are the only ones with access. 
 
+A.I. Prompts used to assist with use/misuse case:
+No A.I. prompts were used.
+
 ### Analysis:
   
   1. Security Requirements:
