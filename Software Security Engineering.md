@@ -24,7 +24,7 @@
      * []()
      * []() 
 
-# OSS project documentation for security-related configuration and installation issues
+## OSS project documentation for security-related configuration and installation issues
 
   As of September 30, 2024 there are no open security issues, with the security tag, for BitWarden. However, Bitwarden maintains a priavte security issues board that keeps some of these security issues out of the [public eye](https://hackerone.com/bitwarden?type=team). There are installtion concerns for our hypothetical operating environment as listed below. Some of these issues may be security related but they don't appear to impact the security performance of the actual BitWarden software, i.e. no issues with password hashing, or key generation, or operation of the secrets manager.   
 
