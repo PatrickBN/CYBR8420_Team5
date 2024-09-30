@@ -17,4 +17,5 @@ No A.I. prompts where used.
      * Audit Logging: This is needed to track people who access, stores, or retrieves secrets. This makes sure that all events are logged, which allows Bitwarden to detect unusual behavior. Logs should also capture any modifications to help show evidence when there is a security incident.
 
   2. Security Features:
-     * Multi-Factor Authentication: Bitwarden has their own two-factor authentication methods.
+     * Multi-Factor Authentication: Bitwarden has their own two-factor authentication methods. [here](https://bitwarden.com/help/setup-two-step-login/)
+     * Role-Based Access Control: Bitwardens RBAC makes sure that employees only have access to the secretst that is needed by their job function.
