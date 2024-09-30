@@ -1,4 +1,4 @@
-**Use Case Description:****
+**Use Case Description:**<br>
 Bitwarden identifies that a password stored in the vault has been compromised in a known data breach. The user receives a notification, logs in to Bitwarden, and updates the breached password, which is then securely saved in the vault.
 Preconditions: The user's credentials were involved in a breach and tied to a known service.
 Postconditions: The compromised password is updated, and the user's accounts are now secured.
