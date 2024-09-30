@@ -1,10 +1,12 @@
 ## Use Case User Logon
 [Link to SSE document](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Software%20Security%20Engineering.md)
 
-Description:
+### Description:
+
 Each employee has access to a password manager and secrets manager that will enable them to have assurance when they log into their accounts and submit code using their accounts that they are the only ones with access. 
 
-A.I. Prompts used to assist with use/misuse case:
+### A.I. Prompts used to assist with use/misuse case:
+
 No A.I. prompts were used.
 
 ### Analysis:
