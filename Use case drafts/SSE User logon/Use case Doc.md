@@ -10,4 +10,4 @@ Analysis:
   Security Features:
 
 Diagram:
-[Link to Diagram]
+![Link to Diagram](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20User%20logon/SSE%20User%20Logon%20Use%20case%201.png)
