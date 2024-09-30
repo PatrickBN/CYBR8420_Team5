@@ -19,7 +19,8 @@
      * [User logon](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20User%20logon/Use%20case%20user%20logon%20Doc.md)
            Each employee has access to a password manager and secrets manager that will enable them to have assurance when they log into their accounts and submit code using their accounts that they are the only ones with access.
        
-     * []()
+     * [Secure Code](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SEE%20SecureCode/Secure%20code%20Doc.md)
+           An employee is using Bitwarden for secure storage and management of sensitive information such as credentials, API keys, or other secrets.
      * []()
      * []()
      * []() 
