@@ -19,4 +19,4 @@ Each employee has access to a password manager and secrets manager that will
       * BitWarden secrets manager logs events
 
 Diagram:
-![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20User%20logon/SSE%20User%20Logon%20Use%20case%202.png)
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20User%20logon/SSE%20User%20Logon%20Use%20case%203.png)
