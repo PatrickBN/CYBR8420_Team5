@@ -39,7 +39,7 @@ BitWarden's use in our hypothetical operating environment is essential for maint
 
 Tobias Lathrop: Although we still have to work around our various schedules the team managed to pull together, and even after adding a new team member halfway through the week, put together a Software Security Engineering document that exceeds my expectations. The quality of work from the group for this assignment is something I hope to bring to the rest of the project. While I would still like to improve my communication effiency and clarity I am happy with how this has turned out. I would also like to work on getting my part of the project done in a more timely manner so that I can provide more in depth feedback to my teammates and provide more of a guide as the team leader.
 
-Conner Braley:
+Conner Braley: Working through this week has been a tough one for me as it was super busy. However our team did ideed pull through and came up with some really good information! Although it got done pretty late the team came together andd we helped eachother out with  what needed to be done! Especially with adding a new memeber this week I think our team worked great together and came through with this assignment.
 
 Kwanz Skinner:
 
