@@ -45,6 +45,6 @@ Kwanz Skinner:
 
 Patrick Nikiema:
 
-Debaris Ezumah: As the new addition to the team, I think the team did a great job in communication, and integrating me into the team seemlessly. Overall, I feel that I can contribute more to the overall depth of the project (ecommerce), and will aim on keeping high communication and quality standards. It was a busy week with work projects, but I hope to contribute greatly in any capacity that is required of me, no matter the timeframe.
+Debaris Ezumah: As the new addition to the team, I think the team did a great job in communication, and integrating me into the team seemlessly. Overall, I feel that I can contribute more to the overall depth of the project (ecommerce + BitWarden integration), and will aim on keeping high communication and quality standards. It was a busy week with work projects, but I hope to contribute greatly in any capacity that is required of me, no matter the timeframe.
 
 ### Contributions
