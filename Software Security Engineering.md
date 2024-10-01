@@ -42,7 +42,7 @@ Tobias Lathrop: Although we still have to work around our various schedules the 
 
 Conner Braley: Working through this week has been a tough one for me as it was super busy. However our team did ideed pull through and came up with some really good information! Although it got done pretty late the team came together andd we helped eachother out with  what needed to be done! Especially with adding a new memeber this week I think our team worked great together and came through with this assignment.
 
-Kwanz Skinner:
+Kwanz Skinner:This week was rough for me as well. I’ve had multiple things going on outside of school and work so I was pushing myself to the limit. As I type this I am at work with my laptop doing school. This, however, was a pretty good week and I think that the team really came together to meet the expectations that were set out for us all. For my my project it was a task just setting things up. After revamping the A.I. prompt several times I finally got to a helpful solution. I also prompted the A.I. to use latex coding to help create the flowchart on a website called overleaf. After generating the code I copied and paste the code and compiled the evidence. Overall, I was able to correct my errors and accomplish the teams goal.
 
 Patrick Nikiema:
 
