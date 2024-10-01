@@ -9,4 +9,6 @@ The user has stored credentials in the Bitwarden vault.
 A data breach has occurred involving credentials stored in the user's vault.
 The user's credentials are linked to a known service involved in the breach.<br>
 **<br>Trigger:**
-Bitwarden detects that the user’s stored credentials have been compromised in a known data breach.
+Bitwarden detects that the user’s stored credentials have been compromised in a known data breach.<br>
+**<br>Postconditions:**
+The breached password has been replaced with a strong, secure password.
