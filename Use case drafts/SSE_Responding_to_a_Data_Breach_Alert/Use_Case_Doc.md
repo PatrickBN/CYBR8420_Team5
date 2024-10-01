@@ -30,3 +30,6 @@ Regular third-party security audits ensure that Bitwarden follows the latest bes
 <br>**Source:https://www.techrepublic.com/article/bitwarden-review/**<br>
 <br>**https://www.pcmag.com/reviews/bitwarden**<br>
 <br>**Source: https://bitwarden.com/help/bitwarden-security-white-paper/**<br><br>
+
+**Diagram:**<br>
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE_Responding_to_a_Data_Breach_Alert/Diagram.png)
