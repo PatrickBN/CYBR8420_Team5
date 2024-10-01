@@ -24,7 +24,7 @@ BitWarden's use in our hypothetical operating environment is essential for maint
      * [Responding to a Data Breach](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE_Responding_to_a_Data_Breach_Alert/Use_Case_Doc.md)
      * [Secure Payments](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20Secure%20Payments/Secure%20Payments.md)
            This use case secures employees company credit/debit cards using BitWarden and assigns their use to employees with access controls and multi-factor authentication.
-     * [Customer-Supplier process](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20Customer%20Supplier/Customer_Supplier%20Doc) 
+     * [Customer-Supplier process](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20Customer%20Supplier/Customer_Supplier%20Doc.md) 
            This displays the relationship between front-end customer, supplier, bank, and 'possible' outside threats.
 ## OSS project documentation for security-related configuration and installation issues
 
