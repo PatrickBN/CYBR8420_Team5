@@ -22,7 +22,8 @@
      * [Secure Code](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SEE%20SecureCode/Secure%20code%20Doc.md)
            An employee is using Bitwarden for secure storage and management of sensitive information such as credentials, API keys, or other secrets.
      * []()
-     * []()
+     * [Secure Payments](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20Secure%20Payments/Secure%20Payments.md)
+           This use case secures employees company credit/debit cards using BitWarden and assigns their use to employees with access controls and multi-factor authentication.
      * []() 
 
 ## OSS project documentation for security-related configuration and installation issues
