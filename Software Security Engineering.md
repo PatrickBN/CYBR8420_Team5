@@ -12,7 +12,7 @@
 
   1. Introduction
 
-
+BitWarden's use in our hypothetical operating environment is essential for maintaining the security of the business operations. From employee *User Logon* we are able to ensure that when an employee logs onto their account the actions taken can be reasonably assumed to be the actions of an employee. With *Secure Code* can be be assured that the code for our hypothetical operating environment isn't compromised by a threat actor. With *Responding to a Data Breach* we can be aware of events that may have impacted the security of our systems. *Secure Payments* allows us to maintain company cards/accounts that can be monitored. And *Customer-Supplier process* keeps our supply chain intact, ensuring our hypothetical operating environment will continue operating. These use cases take an indepth look at how BitWarden will protect our hypothetical operating environment from misuse.
 
   2. Use Cases
 
@@ -21,10 +21,10 @@
        
      * [Secure Code](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SEE%20SecureCode/Secure%20code%20Doc.md)
            An employee is using Bitwarden for secure storage and management of sensitive information such as credentials, API keys, or other secrets.
-     * []()
+     * [Responding to a Data Breach]()
      * [Secure Payments](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Use%20case%20drafts/SSE%20Secure%20Payments/Secure%20Payments.md)
            This use case secures employees company credit/debit cards using BitWarden and assigns their use to employees with access controls and multi-factor authentication.
-     * []() 
+     * [Customer-Supplier process]() 
 
 ## OSS project documentation for security-related configuration and installation issues
 
