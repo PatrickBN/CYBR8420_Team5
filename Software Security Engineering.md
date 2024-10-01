@@ -37,4 +37,14 @@ BitWarden's use in our hypothetical operating environment is essential for maint
 
 ### Reflections
 
+Tobias Lathrop:
+
+Conner Braley:
+
+Kwanz Skinner:
+
+Patrick Nikiema:
+
+Debaris Ezumah:
+
 ### Contributions
