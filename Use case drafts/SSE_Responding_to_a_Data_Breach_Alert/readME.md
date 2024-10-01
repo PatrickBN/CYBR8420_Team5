@@ -1,4 +1,4 @@
-A use case for Bitwarden Responding to a Data Breach Alert involves the following steps:
+This diagram illustrates a use case for Bitwarden Responding to a Data Breach Alert.
 
 **Title:** Responding to a Data Breach Alert<br>
 **<br>Actors:**<br><br>
