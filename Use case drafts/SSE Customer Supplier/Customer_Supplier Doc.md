@@ -19,12 +19,19 @@ None, there was no AI configured for prompt usage.
 
 ### Security Requirements and Features:
   End-to-End encryption- This ensures BitWarden cannot access data to protect against breaches. Bitwarden uses AES-256 bit encryption, PBKDF2 SHA-256, and salted hashing to protect data.
+ 
   Bitwarden Zero-knowledge - Ensures the user / organization only have access to the stored data. (Protecting company credentials)
+  
   BitWarden secure sharing feature - Ensures ability to share sensitive data such as admin accounts without exposing passwords
+ 
   Backup / Recovery - Protocol needed to ensure no lost data in case of system failures, corruption, or deletion.
+ 
   BitWarden API - Prevent attacks from exploiting vulnerabilities
+ 
   TOTP- For employees, customers, suppliers
+
   DUO security integration - For employees, customers, suppliers
+ 
   FIDO2/WebAuthn - Yubikey for employees
 
   Framework:
