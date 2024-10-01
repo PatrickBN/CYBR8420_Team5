@@ -17,6 +17,16 @@ Breach alerts are delivered promptly, and users must be immediately prompted to 
 Bitwarden must ensure that user devices and software are secure and resistant to tampering.<br>
 <br>**Source: https://bitwarden.com/help/bitwarden-security-white-paper/**<br><br>
 **Security Features:**<br>
-//TODO
+Bitwarden encrypts all stored data with AES-256, both while it's being transferred and when it's stored, so only the user can access it.
+It doesn’t store or know your master password, meaning only you can unlock your vault.
+It supports various 2FA methods and includes a secure tool to help users create strong, unique passwords.
+Bitwarden syncs encrypted data securely across different devices, like desktop, mobile, and browser extensions.
+Users can securely share passwords and other sensitive data through encrypted channels with trusted individuals or organizations.
+It notifies users if their credentials appear in known data breaches through integrations like Have I Been Pwned, offers tools to check vault security, including password strength analysis and flagging of weak or reused passwords.
+Organizations can choose to self-host Bitwarden to control their own data and infrastructure.
+Bitwarden logs all activities within the vault, helping track actions and identify suspicious behavior. Users can designate trusted individuals to access their vault in case of emergency. It provides encrypted backup and recovery options for vault data and allows users to store documents securely by attaching encrypted files to vault items.
+Regular third-party security audits ensure that Bitwarden follows the latest best practices for security.
 
-
+<br>**Source:https://www.techrepublic.com/article/bitwarden-review/**<br>
+<br>**https://www.pcmag.com/reviews/bitwarden**<br>
+<br>**Source: https://bitwarden.com/help/bitwarden-security-white-paper/**<br><br>
