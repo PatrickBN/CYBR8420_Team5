@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="BZeBdIKzm5LHckF4zBrf">
+    <mxGraphModel dx="1218" dy="1743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-1" value="&lt;b&gt;Top-Claim C1:&lt;/b&gt;&lt;div&gt;Bitwarden checks if passwords have been in data breaches using Have I Been Pwned (HIBP) database&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" width="165" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-3" value="&lt;b&gt;Context: CT1&lt;/b&gt;&lt;div&gt;Bitwarden is a password manager&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="630" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-10" value="&lt;b&gt;Evidence E1:&lt;/b&gt;&lt;div&gt;Bitwarden finds password in HIBP database&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="610" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dw_pi0EsB-rtCPLMLojA-1" target="dw_pi0EsB-rtCPLMLojA-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="40" as="sourcePoint" />
+            <mxPoint x="620" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-22" value="&lt;b&gt;Sub-Claim C2:&lt;/b&gt;&lt;div&gt;HIBP is reliable and widely used&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-25" value="&lt;b&gt;Sub-Claim C3:&lt;/b&gt;&lt;div&gt;HIBP is online and accessible&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="240" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.684;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.559;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="dw_pi0EsB-rtCPLMLojA-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="561" y="180" as="sourcePoint" />
+            <mxPoint x="560" y="228" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.566;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="dw_pi0EsB-rtCPLMLojA-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280.96000000000004" y="182" as="sourcePoint" />
+            <mxPoint x="281" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280.5" y="320" as="sourcePoint" />
+            <mxPoint x="279.5" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-30" value="&lt;b&gt;Sub-Claim C4:&lt;/b&gt;&lt;div&gt;HIBP database collection is up-to-date&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="207.5" y="480" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280.5" y="430" as="sourcePoint" />
+            <mxPoint x="279.5" y="478" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-33" value="&lt;b&gt;Evidence E1:&lt;/b&gt;&lt;div&gt;Bitwarden does not find password in HIBP database&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="610" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="225" y="560" as="sourcePoint" />
+            <mxPoint x="224" y="608" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="346" y="560" as="sourcePoint" />
+            <mxPoint x="345" y="608" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-40" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="200" y="770" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-41" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="335" y="760" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-42" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="215.5" y="720" as="sourcePoint" />
+            <mxPoint x="214.5" y="768" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-43" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350.5" y="710" as="sourcePoint" />
+            <mxPoint x="349.5" y="758" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-44" value="&lt;b&gt;Rebuttal R1:&lt;/b&gt; Unless HIBP database is not reliable" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-45" value="&lt;b&gt;Rebuttal R2: &lt;/b&gt;Unless HIBP database is offline" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-46" value="&lt;b&gt;Rebuttal R3:&lt;/b&gt; Unless HIBP database is not up-to-date" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;" vertex="1" parent="1">
+          <mxGeometry x="250" y="370" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-48" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="dw_pi0EsB-rtCPLMLojA-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="90" as="sourcePoint" />
+            <mxPoint x="520" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-49" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=block;endFill=1;" edge="1" parent="1" source="dw_pi0EsB-rtCPLMLojA-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="246.75" y="80" as="sourcePoint" />
+            <mxPoint x="312.75" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-50" value="&lt;h1&gt;Assurance Case for Bitwarden&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-51" value="&lt;b&gt;Evidence E1:&lt;/b&gt;&lt;div&gt;Bitwarden finds password in HIBP database&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="580" y="380" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-52" value="&lt;b&gt;Evidence E1:&lt;/b&gt;&lt;div&gt;Bitwarden does not find password in HIBP database&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-53" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="480" y="540" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-54" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="615" y="530" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-55" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="495.5" y="490" as="sourcePoint" />
+            <mxPoint x="494.5" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-56" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.368;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630.5" y="480" as="sourcePoint" />
+            <mxPoint x="629.5" y="528" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-57" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.684;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.559;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="495" y="320" as="sourcePoint" />
+            <mxPoint x="495" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dw_pi0EsB-rtCPLMLojA-58" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.684;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.559;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="615" y="320" as="sourcePoint" />
+            <mxPoint x="615" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
