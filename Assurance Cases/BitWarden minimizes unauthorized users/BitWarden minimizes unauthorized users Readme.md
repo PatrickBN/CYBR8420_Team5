@@ -3,7 +3,7 @@
 
 ### Summary
 
-In order for the employees to logon into the hypothetical operating enivronment system they must use the BitWarden OSS. This requires each employee to go through authorization, because of the need to ensure proper authorization assurance is required to mitigate the doubts about BitWardens ability to provide trustworthy user authentication.
+In order for the employees to logon into the hypothetical operating enivronment system they must use the BitWarden OSS. This requires each employee to go through authorization, because of the need to ensure proper authorization, assurance is required to mitigate the doubts about BitWardens ability to provide trustworthy user authentication.
 
 ### Argument
 
