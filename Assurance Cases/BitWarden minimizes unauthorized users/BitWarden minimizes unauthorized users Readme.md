@@ -15,4 +15,4 @@ E3:
 
 
 ### Diagram
-![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/BitWarden%20minimizes%20unauthorized%20users/Assurance%20Cases%20draft%201.png)
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/BitWarden%20minimizes%20unauthorized%20users/Assurance%20Cases%20draft%202.png)
