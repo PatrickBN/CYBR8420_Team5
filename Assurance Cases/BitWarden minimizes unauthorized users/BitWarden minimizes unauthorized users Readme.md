@@ -9,11 +9,11 @@ In order for the employees to logon into the hypothetical operating enivronment 
 
 E1: The BitWarden password policy is set by the admin, while the default length is 5, the admin has a lot of control over how long the password can be and what special characters can be in it. [Here is the source code](https://github.com/bitwarden/clients/blob/main/libs/tools/generator/core/src/types/password-generator-policy.ts)
 
-E2: The BitWarden 
+E2: The BitWarden 2-FA is a 5-10 digit code that uses SHA-1 to generate a new code every 30 seconds [Source](https://bitwarden.com/help/bitwarden-authenticator/). BitWarden also allows for Duo, Email, and Yubikey [authenticators](https://github.com/bitwarden/clients/blob/main/libs/angular/src/auth/components/two-factor-auth/two-factor-auth.component.ts#L53) this grants a wide range of secured ways to use 2-FA whil retaining the security requirements for the hypothetical operating environment.
 
-E3:
+E3: The encryption protecting the passwords utilizes [PBKDF2](https://github.com/bitwarden/clients/blob/main/libs/node/src/services/node-crypto-function.service.ts#L13) to generate the hash and salt the password. The full process is described [here](https://bitwarden.com/help/what-encryption-is-used/#pbkdf2)
 
-E4:
+E4: The account recovery keys are [encrypted](https://bitwarden.com/help/account-recovery/#encryption) by using a public key belonging to the organziation and the users account encryption key and decrypted with the oganizations private key.
 
 
 ### Diagram
