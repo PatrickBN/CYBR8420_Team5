@@ -17,4 +17,4 @@ E4: The account recovery keys are [encrypted](https://bitwarden.com/help/account
 
 
 ### Diagram
-![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/BitWarden%20minimizes%20unauthorized%20users/Assurance%20Cases%20draft%202.png)
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/BitWarden%20minimizes%20unauthorized%20users/Assurance%20Cases%20draft%203.png)
