@@ -17,4 +17,4 @@ E4: BitWardens logging review verifies that comprehensive audit logs are maintai
 
 ### Diagram
 
-![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/Bitwarden%20Using%20Secrets%20To%20Ensure%20Code%20Is%20Protected/Assurance%20Case.drawio.png)
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/Bitwarden%20Using%20Secrets%20To%20Ensure%20Code%20Is%20Protected/Assurance%20Case.drawio2.png0)
