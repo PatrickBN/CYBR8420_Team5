@@ -12,13 +12,13 @@ Bitwarden checks for compromised passwords through its integration with breach d
 
 If Bitwarden detects that a password has been compromised in a known data breach, it notifies the user, recommending that they update the exposed password. Bitwarden also provides tools to help users strengthen their security, such as generating strong, unique passwords and enabling two-factor authentication. Additionally, Bitwarden’s Vault Health Reports allow users to regularly check for weak, reused, or compromised passwords, further enhancing their overall security. This system ensures that users can stay informed about potential threats without compromising their privacy or exposing their credentials during the checking process.
 
-[Bitwarden] (https://bitwarden.com/blog/have-you-been-pwned/)
+[Bitwarden](https://bitwarden.com/blog/have-you-been-pwned/)
 
-[Bitwarden Reports] (https://bitwarden.com/help/reports/#:~:text=The%20Data%20Breach%20report%20identifies,before%20deciding%20to%20use%20it.)
+[Bitwarden Reports](https://bitwarden.com/help/reports/#:~:text=The%20Data%20Breach%20report%20identifies,before%20deciding%20to%20use%20it.)
 
-[Bitwarden FAQ] (https://haveibeenpwned.com/FAQs#:~:text=Pastes%20are%20often%20transient;%20they,longer%20exists%20at%20the%20source.)
+[Bitwarden FAQ](https://haveibeenpwned.com/FAQs#:~:text=Pastes%20are%20often%20transient;%20they,longer%20exists%20at%20the%20source.)
 
-[Consumer Reports] (https://www.consumerreports.org/electronics/data-theft/how-to-use-have-i-been-pwned-data-breach-a6598286668/#:~:text=(The%20term%20%E2%80%9Cpwn%E2%80%9D%20is,online%20and%20traded%20by%20criminals.)
+[Consumer Reports](https://www.consumerreports.org/electronics/data-theft/how-to-use-have-i-been-pwned-data-breach-a6598286668/#:~:text=(The%20term%20%E2%80%9Cpwn%E2%80%9D%20is,online%20and%20traded%20by%20criminals.)
 
 ### Diagram
 ![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/Bitwardern%20checks%20in%20a%20password%20is%20compromized/Bitwarden.png)
