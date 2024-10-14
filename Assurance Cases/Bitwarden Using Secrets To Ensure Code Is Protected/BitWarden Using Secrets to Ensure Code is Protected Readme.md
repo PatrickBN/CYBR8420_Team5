@@ -16,5 +16,4 @@ E3: Bitwardens Secret Rotation policy review shows that Bitwarden enforces a reg
 E4: BitWardens logging review verifies that comprehensive audit logs are maintained for all secret access and modification events. This supports traceability, and and accountability, which makes sure that all actions on secrets are recorded. This minimizes the risk of tampering. [Source](https://bitwarden.com/help/bitwarden-security-white-paper/#logging-monitoring-and-alert-notification)
 
 ### Diagram
-
-![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/Bitwarden%20Using%20Secrets%20To%20Ensure%20Code%20Is%20Protected/Assurance%20Case.drawio2.png0)
+![](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/Bitwarden%20Using%20Secrets%20To%20Ensure%20Code%20Is%20Protected/Assurance%20Case.drawio2.png)
