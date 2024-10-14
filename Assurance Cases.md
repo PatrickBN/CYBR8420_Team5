@@ -18,6 +18,8 @@
 
      Summary: The Data Breach reports identify compromised data (email addresses, passwords, credit cards, DoB, and more) in known breaches, using a service called Have I Been Pwned (HIBP). Bitwarden uses the same HIBP database to check if any of the stored passwords have appeared in data breaches. Users are alerted and prompted to update their password if any matches are found in the HIBP database
 
+5. Debaris Ezumah - 
+
 ### Alignment and Gaps
 
 
@@ -26,6 +28,14 @@
   Alignment: The BitWarden software aligns well with the goal of reducing the instances or likelihood of an unauthorized user gaining access to a user account. The password hashing and salting reduces the chance of an attacker brute forcing the password. The 2 factor authentication further reduces the chance of unauthorized access by adding extra steps if a password is compromised, and the account recovery steps would allow for a user to change their password in the event that the account is compromised and the user needs to reset the password.
       
   Gaps: The main gap in this assurance is the default password policy, the policy is only a minimum of 5 character lengths and contains no special requirements. While this policy is changeable through an admin console a careless admin could easily forget to change the default policy which would greatly weaken all the security features used to minimize authorized users.
+
+  2:
+  
+  3:
+  
+  4:
+  
+  5:
 
 ### Reflections
 
