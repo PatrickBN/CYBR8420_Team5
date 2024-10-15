@@ -39,7 +39,10 @@ Gaps: While the assurance case focuses on digital security measures it does not 
   
   Encryption policies like AES-256 are well documented and available with no gaps. When it comes to encryption vulnerability testing that is done through BitWardens security audits, project-specific vulnerability assessments should be preformed independently. This helps with protection. Configuration settings for access control are documented but we would need to audit our own configuration to verify proper implementation. For misconfigure alerting, Bitwarden supports it, however custom configurations might need additional setup to make sure that misconfigurations are detected. Secret policies are clearly documented and so is logging. Endpoint security is not documented or covered by BitWarden and will require some additional measures. This will make sure that secrets are safe against endpoint vulnerabilities. 
   
-  4:
+  4: Bitwarden checks if a password has been compromised
+  Alignment:
+  
+  Gaps: Bitwarden’s system for checking compromised passwords has a few key gaps. First, it relies on external services like Have I Been Pwned, meaning it can only detect passwords from publicly known breaches, missing any undisclosed incidents. There can also be delays between when a breach occurs and when it is added to these databases, leaving users exposed in the interim. Additionally, while Bitwarden uses k-anonymity to protect privacy during checks, this method only checks part of the password hash, which could lead to potential inaccuracies. Lastly, Bitwarden does not automate any remediation; it alerts users to compromised passwords, but users must manually update them, which could lead to delays in securing accounts.
   
   5:
 
