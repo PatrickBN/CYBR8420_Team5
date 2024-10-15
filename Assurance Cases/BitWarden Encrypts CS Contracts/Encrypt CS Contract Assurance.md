@@ -3,7 +3,7 @@
 
 ### Summary :>
 
-The goal of this Assurance case is to clarify the way the system, handles an important part of the customer supplier process utilizing Bitwarden. [***Contracts!***] Bitwardern ensures that any and all documents are secured properly and are encryoted, stored, and transmitted in a a linear way allowing the data to be secured from unauthorized access. This also assists in guaranteeing the their integrity and confidentiality. Even with all that, there are many iterations of vunerabilities that could occur such as human error and threats surrounding the ecosystem of the company or person in question. Such as hackers, disgruntled employees, rival businesses, and more. The important introduction to this assurance case is the notion that any questions to the integrity of the security will be swifty nullified and explained with detailed evidence.  
+The goal of this Assurance case is to clarify the way the system, handles an important part of the customer supplier process utilizing Bitwarden. [***Contracts!***] Bitwarden ensures that any and all documents are secured properly and are encrypted, stored, and transmitted in a a linear way allowing the data to be secured from unauthorized access. This also assists in guaranteeing the their integrity and confidentiality. Even with all that, there are many iterations of vunerabilities that could occur such as human error and threats surrounding the ecosystem of the company or person in question. Such as hackers, disgruntled employees, rival businesses, and more. The important introduction to this assurance case is the notion that any questions to the integrity of the security will be swifty nullified and explained with detailed evidence.  
 
 ### Argument :{
 
