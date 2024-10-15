@@ -47,7 +47,12 @@ Gaps: While the assurance case focuses on digital security measures it does not 
   
   Gaps: Bitwarden’s system for checking compromised passwords has a few key gaps. First, it relies on external services like Have I Been Pwned, meaning it can only detect passwords from publicly known breaches, missing any undisclosed incidents. There can also be delays between when a breach occurs and when it is added to these databases, leaving users exposed in the interim. Additionally, while Bitwarden uses k-anonymity to protect privacy during checks, this method only checks part of the password hash, which could lead to potential inaccuracies. Lastly, Bitwarden does not automate any remediation; it alerts users to compromised passwords, but users must manually update them, which could lead to delays in securing accounts.
   
-  5:
+  5: BitWarden enrcrypts a sensitive contract
+
+  Alignment: Bitwardens approach to encrypting secure notes strongly adheres with the best industry practices. With Zero-Knowledge architeture it cannot decrypt secure notes since no keys are avaliable. There is also the fact that data is being encrypted using TLS 1.3 for secured communication between users and the database. The protection against brute force attacks using AES-256 at rest help limit such threats. Conducting penetration tests and maintaining a scheduled backuo is also key in BitWae
+
+
+  Gaps:
 
 ### Reflections
 
@@ -56,3 +61,4 @@ Gaps: While the assurance case focuses on digital security measures it does not 
 Conner Braley - For this assignment the assurance cases that we developed were done based off of the previous deliverable. I think the teamwork done between us was good as we began to communicate more to give feedback and help each other out with what could be fixed. The team is working hard, however despite all of our different schedules and were able to accomplish this assignment. 
 
     
+Debaris Ezumah - 
