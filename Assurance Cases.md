@@ -29,7 +29,11 @@
       
   Gaps: The main gap in this assurance is the default password policy, the policy is only a minimum of 5 character lengths and contains no special requirements. While this policy is changeable through an admin console a careless admin could easily forget to change the default policy which would greatly weaken all the security features used to minimize authorized users.
 
-  2:
+  2: BitWarden secures sensitive credit card information
+
+  Alignment: Bitwarden seems to be fit for the purpose of this project, which is protecting the sensitive information and payments on a company’s credit card. The use of encryption to secure the data uses end-to-end encryption to protect all sensitive information and cannot be accessory by unauthorized parties, including Bitwarden itself. Implementation of RBAC is supported by BitWarden’s ability to assign specific permissions to users base on their roles. The ability to focus on mitigating risks from external and internal threats aligns with the overall goal. 
+
+Gaps: While the assurance case focuses on digital security measures it does not fully address the physical risks, such as the loss or theft of company credit cards. Human factors and training could always be a gap. The mishaps of employees can easily be an issue. Another issue is the lack of responsibility the company will take if security measures fail, such as in the event of a breach or insider threat. The assurance case does not consider whether the security mechanisms (encryption, monitoring, etc.) scale effectively as the organization grows or if performance is impacted by security features like constant encryption/decryption or monitoring.
   
   3:
   
