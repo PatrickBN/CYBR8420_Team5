@@ -49,7 +49,7 @@ Gaps: While the assurance case focuses on digital security measures it does not 
   
   5: BitWarden enrcrypts a sensitive contract
 
-  Alignment: Bitwardens approach to encrypting secure notes strongly adheres with the best industry practices. With Zero-Knowledge architeture it cannot decrypt secure notes since no keys are avaliable. There is also the fact that data is being encrypted using TLS 1.3 for secured communication between users and the database. The protection against brute force attacks using AES-256 at rest help limit such threats. Conducting penetration tests and maintaining a scheduled backuo is also key in BitWae
+  Alignment: Bitwardens approach to encrypting secure notes strongly adheres with the best industry practices. With Zero-Knowledge architeture it cannot decrypt secure notes since no keys are avaliable. There is also the fact that data is being encrypted using TLS 1.3 for secured communication between users and the database. The protection against brute force attacks using AES-256 at rest help limit such threats. Conducting penetration tests and maintaining a scheduled backup is also key in BitWarden being a powerful conductor for encrypting important information that contains legal, finacnial, or anything legally binding signed by both parties.
 
 
   Gaps:
