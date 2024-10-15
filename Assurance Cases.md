@@ -20,7 +20,7 @@
 
 5. Debaris Ezumah - [BitWarden Encrypts Customer Supplier Contracts](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Assurance%20Cases/BitWarden%20Encrypts%20CS%20Contracts/Encrypt%20CS%20Contract%20Assurance.md)
 
-     Summary: Bitwarden’s comprehensive set of security frameworks, encryption, authentication, and admin controls ensures the confidentiality, integrity, and availability of contracts for enterpenuers and suppliers to store and call back on in times or renegotiation using our system as a middleman. BitWarden does a good job evidence mapping; showcasing the the safety and reliablity taken with encrption audits, documentation, and incident responses logs. All documentation is encrypted, stored, and transmitted in a way that protects the files using Zero-knowledge and TOTP to name a few.
+     Summary: Bitwarden’s set of security frameworks, encryption, authentications, and admin controls ensures the confidentiality, integrity, and availability of contracts for enterpenuers and suppliers; to store and call back on compliance times or renegotiation using our system as a middleman. BitWarden does a good job evidence mapping; showcasing the the safety and reliablity taken with encrption audits, documentation, and incident responses logs. All documentation is encrypted, stored, and transmitted in a way that protects the files using Zero-knowledge and TOTP to name a few.
    
 ### Alignment and Gaps
 
