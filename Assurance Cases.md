@@ -35,7 +35,9 @@
 
 Gaps: While the assurance case focuses on digital security measures it does not fully address the physical risks, such as the loss or theft of company credit cards. Human factors and training could always be a gap. The mishaps of employees can easily be an issue. Another issue is the lack of responsibility the company will take if security measures fail, such as in the event of a breach or insider threat. The assurance case does not consider whether the security mechanisms (encryption, monitoring, etc.) scale effectively as the organization grows or if performance is impacted by security features like constant encryption/decryption or monitoring.
   
-  3:
+  3: BitWarden using secrets to ensure that code is protected from unauthorized users 
+  
+  Encryption policies like AES-256 are well documented and available with no gaps. When it comes to encryption vulnerability testing that is done through BitWardens security audits, project-specific vulnerability assessments should be preformed independently. This helps with protection. Configuration settings for access control are documented but we would need to audit our own configuration to verify proper implementation. For misconfigure alerting, Bitwarden supports it, however custom configurations might need additional setup to make sure that misconfigurations are detected. Secret policies are clearly documented and so is logging. Endpoint security is not documented or covered by BitWarden and will require some additional measures. This will make sure that secrets are safe against endpoint vulnerabilities. 
   
   4:
   
@@ -43,5 +45,8 @@ Gaps: While the assurance case focuses on digital security measures it does not 
 
 ### Reflections
 
-  The assurance cases were developed by extending the work done in the previous deliverable, as we each had more specialized knowledge of the BitWarden software from different viewpoints we were able to more easily move the work done into this deliverable. This project featured much more colloboration and review in between team members. After receiving the professors recommendations the team set out to work together more and create more consistent work. While the work was still split among the team members each team member has been more proactive in getting feedback and aligning our formatting for more consistency across the deliverable. 
+  The assurance cases were developed by extending the work done in the previous deliverable, as we each had more specialized knowledge of the BitWarden software from different viewpoints we were able to more easily move the work done into this deliverable. This project featured much more colloboration and review in between team members. After receiving the professors recommendations the team set out to work together more and create more consistent work. While the work was still split among the team members each team member has been more proactive in getting feedback and aligning our formatting for more consistency across the deliverable.   
   
+Conner Braley - For this assignment the assurance cases that we developed were done based off of the previous deliverable. I think the teamwork done between us was good as we began to communicate more to give feedback and help each other out with what could be fixed. The team is working hard, however despite all of our different schedules and were able to accomplish this assignment. 
+
+    
