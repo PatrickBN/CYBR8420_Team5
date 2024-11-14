@@ -22,61 +22,61 @@
 
   3. Spoofing the BitWarden Client Process
      
-     Description:	
+     Description:	BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by MFA. Consider using a standard authentication mechanism to identify the destination process.
      
      Justification:
      
   4. Potential Lack of Input Validation for BitWarden Client
      
-     Description:	
+     Description:	Data flowing across 2fa may be tampered with by an attacker. This may lead to a denial of service attack against BitWarden Client or an elevation of privilege attack against BitWarden Client or an information disclosure by BitWarden Client.
      
      Justification:
      
   5. Potential Data Repudiation by BitWarden Client
      
-     Description:	
+     Description:	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
      Justification:
      
   6. Data Flow Sniffing
      
-     Description:	
+     Description:	Data flowing across 2fa may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
      
      Justification:
      
   7. Potential Process Crash or Stop for BitWarden Client
      
-     Description:	
+     Description:	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
      Justification:
      
   8. Data Flow 2fa Is Potentially Interrupted
      
-     Description:	
+     Description:	An external agent interrupts data flowing across a trust boundary in either direction.
      
      Justification:
      
   9. BitWarden Client May be Subject to Elevation of Privilege Using Remote Code Execution
      
-      Description:	
+      Description: MFA may be able to remotely execute code for BitWarden Client.
      
       Justification:
      
   10. Elevation by Changing the Execution Flow in BitWarden Client
      
-      Description:	
+      Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
      
       Justification:
       
   11. Cross Site Request Forgery
      
-      Description:	
+      Description: Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site
      
       Justification:
       
   12. Spoofing of the MFA External Destination Entity
      
-      Description:	
+      Description: MFA may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of MFA. Consider using a standard authentication mechanism to identify the external entity.
      
       Justification:
       
