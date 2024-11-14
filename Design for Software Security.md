@@ -26,63 +26,63 @@
      
      Justification:
      
-  5. Spoofing the BitWarden Client Process
+  4. Potential Lack of Input Validation for BitWarden Client
      
      Description:	
      
      Justification:
      
-  6. Spoofing the BitWarden Client Process
+  5. Potential Data Repudiation by BitWarden Client
      
      Description:	
      
      Justification:
      
-  7. Spoofing the BitWarden Client Process
+  6. Data Flow Sniffing
      
      Description:	
      
      Justification:
      
-  8. Spoofing the BitWarden Client Process
+  7. Potential Process Crash or Stop for BitWarden Client
      
      Description:	
      
      Justification:
      
-  9. Spoofing the BitWarden Client Process
+  8. Data Flow 2fa Is Potentially Interrupted
      
      Description:	
      
      Justification:
      
-  10. Spoofing the BitWarden Client Process
+  9. BitWarden Client May be Subject to Elevation of Privilege Using Remote Code Execution
      
       Description:	
      
       Justification:
      
-  11. Spoofing the BitWarden Client Process
-     
-      Description:	
-     
-      Justification:
-      
-  12. Spoofing the BitWarden Client Process
+  10. Elevation by Changing the Execution Flow in BitWarden Client
      
       Description:	
      
       Justification:
       
-  13. Spoofing the BitWarden Client Process
+  11. Cross Site Request Forgery
      
       Description:	
      
       Justification:
       
-  13. Spoofing the BitWarden Client Process
+  12. Spoofing of the MFA External Destination Entity
      
       Description:	
+     
+      Justification:
+      
+  13. External Entity MFA Potentially Denies Receiving Data
+     
+      Description: 	MFA claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
       Justification:
      
