@@ -220,7 +220,7 @@ Justification:
 
 66. External Entity Breach Reporter Potentially Denies Receiving Data
 Description:	Breach Reporter claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
-Justification:	
+Justification:
 
 67. Spoofing of the Breach Reporter External Destination Entity 
 Description:	Breach Reporter may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Breach Reporter. Consider using a standard authentication mechanism to identify the external entity.
