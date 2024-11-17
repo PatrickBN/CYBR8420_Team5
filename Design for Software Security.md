@@ -48,7 +48,9 @@
      
      Description:	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
-     Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering. 
+     Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
+
+  8. 
      
   9. BitWarden Client May be Subject to Elevation of Privilege Using Remote Code Execution
      
@@ -61,6 +63,8 @@
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
      
       Justification: Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
+
+  11.
       
   12. Spoofing of the MFA External Destination Entity
      
