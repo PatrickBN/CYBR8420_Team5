@@ -86,19 +86,84 @@
      
       Justification:
      
-  14. 
-  15. 
-  16. 
-  17. 
-  18. 
-  19. 
-  20. 
-  21. 
-  22. 
-  23. 
-  24. 
-  25. 
-  26. 
+  14. Data Flow 2fa confirmation Is Potentially Interrupted
+     
+      Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
+     
+      Justification:
+
+  15. Spoofing of Source Data Store Password DB
+     
+      Description: 	Password DB may be spoofed by an attacker and this may lead to incorrect data delivered to BitWarden Client. Consider using a standard authentication mechanism to identify the source data store.
+     
+      Justification:
+ 
+  16. Weak Access Control for a Resource
+     
+      Description: 	Improper data protection of Password DB can allow an attacker to read information not intended for disclosure. Review authorization settings.
+     
+      Justification:
+ 
+  17. Spoofing of the Employee External Destination Entity
+     
+      Description: 	Employee may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Employee. Consider using a standard authentication mechanism to identify the external entity.
+     
+      Justification:
+ 
+  18. External Entity Employee Potentially Denies Receiving Data
+     
+      Description: 	Employee claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+     
+      Justification:
+
+  19. Data Flow Key & confirmation Is Potentially Interrupted
+     
+      Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
+     
+      Justification:
+ 
+  20. Spoofing the Employee External Entity
+     
+      Description: 	Employee may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
+     
+      Justification:
+ 
+  21. Elevation Using Impersonation
+     
+      Description: 	BitWarden Client may be able to impersonate the context of Employee in order to gain additional privilege.
+     
+      Justification:
+  
+  22. Spoofing the BitWarden Client Process
+     
+      Description: 	BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by Employee. Consider using a standard authentication mechanism to identify the destination process.
+     
+      Justification:
+  
+  23. Potential Lack of Input Validation for BitWarden Client
+     
+      Description: 	Data flowing across Login Request may be tampered with by an attacker. This may lead to a denial of service attack against BitWarden Client or an elevation of privilege attack against BitWarden Client or an information disclosure by BitWarden Client. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.
+     
+      Justification:
+ 
+  24. Potential Data Repudiation by BitWarden Client
+     
+      Description: 	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+     
+      Justification:
+  
+  25. Data Flow Sniffing
+     
+      Description: 	Data flowing across Login Request may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. 
+     
+      Justification:
+ 
+  26. Potential Process Crash or Stop for BitWarden Client
+     
+      Description: 	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
+     
+      Justification:
+ 
   27. 
   28. 
   29. 
@@ -115,3 +180,4 @@
   40. 
   41. 
   42. 
+  43. 
