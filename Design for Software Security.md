@@ -78,35 +78,35 @@
      
       Justification: The BitWarden MFA and desktop client both keep logs.
      
-  14. Data Flow 2fa confirmation Is Potentially Interrupted
+ 14. Data Flow 2fa confirmation Is Potentially Interrupted
      
       Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
      
-      Justification:
+      Justification: Use firewalls and Network Access Control Lists (ACLs) to limit communication to authorized IP addresses and ports.
 
   15. Spoofing of Source Data Store Password DB
      
       Description: 	Password DB may be spoofed by an attacker and this may lead to incorrect data delivered to BitWarden Client. Consider using a standard authentication mechanism to identify the source data store.
      
-      Justification:
+      Justification: Require the password database to authenticate itself to the BitWarden client using a standard authentication protocol, such as PKI (Public Key Infrastructure) using server-side certificates.
  
   16. Weak Access Control for a Resource
      
       Description: 	Improper data protection of Password DB can allow an attacker to read information not intended for disclosure. Review authorization settings.
      
-      Justification:
+      Justification: Conduct regular vulnerability scans and penetration tests on the database.
  
   17. Spoofing of the Employee External Destination Entity
      
       Description: 	Employee may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Employee. Consider using a standard authentication mechanism to identify the external entity.
      
-      Justification:
+      Justification: Use mutual TLS (Transport Layer Security) to authenticate both the employee’s device/system and the external destination entity.
  
   18. External Entity Employee Potentially Denies Receiving Data
      
       Description: 	Employee claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
-      Justification:
+      Justification: Sign all transmitted data with a sender’s private key and require the recipient (External Entity Employee) to acknowledge receipt by signing with their private key.
 
   19. Data Flow Key & confirmation Is Potentially Interrupted
      
@@ -118,43 +118,43 @@
      
       Description: 	Employee may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
      
-      Justification:
+      Justification: Establish multiple, independent channels for key exchange and confirmation or Use protocols like TCP for automatic retransmission of lost packets.
  
   21. Elevation Using Impersonation
      
       Description: 	BitWarden Client may be able to impersonate the context of Employee in order to gain additional privilege.
      
-      Justification:
+      Justification: Require reauthentication (e.g., entering a password or MFA) whenever a user or process requests elevated privileges and monitor for patterns of privilege escalation to detect anomalies. Monitor for unusual patterns, such as privilege escalation attempts outside normal working hours. Use machine learning tools to identify deviations from typical user behavior.
   
   22. Spoofing the BitWarden Client Process
      
       Description: 	BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by Employee. Consider using a standard authentication mechanism to identify the destination process.
      
-      Justification:
+      Justification: Regularly test the BitWarden Client for vulnerabilities that could enable spoofing. Apply hardening techniques, such as stripping unnecessary metadata from binaries and using memory protection mechanisms.
   
   23. Potential Lack of Input Validation for BitWarden Client
      
       Description: 	Data flowing across Login Request may be tampered with by an attacker. This may lead to a denial of service attack against BitWarden Client or an elevation of privilege attack against BitWarden Client or an information disclosure by BitWarden Client. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.
      
-      Justification:
+      Justification: Validate inputs at the client side and revalidate them on the server side. Enforce strict limits on input size to prevent buffer overflows.
  
   24. Potential Data Repudiation by BitWarden Client
      
       Description: 	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
-      Justification:
+      Justification: Require the BitWarden Client to digitally sign all transmitted data using a private key. The server verifies the signature using the client’s public key.
   
   25. Data Flow Sniffing
      
       Description: 	Data flowing across Login Request may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. 
      
-      Justification:
+      Justification: Use strong encryption protocols to encrypt all data in transit using the latest version of Transport Layer Security.
  
   26. Potential Process Crash or Stop for BitWarden Client
      
       Description: 	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
-      Justification:
+      Justification: Use a watchdog process to monitor the BitWarden Client and restart it if it becomes unresponsive or crashes. Configure timeouts to detect and respond to failures promptly.
  
   27. 
   28. 
