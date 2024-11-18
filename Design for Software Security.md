@@ -240,45 +240,71 @@
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
-  41.  Bitwarden client may be used to elevate privilege using remote code validation/execution
+  41. 
       Description: Account user may be able to remotely execute code using Bitwarden
-      Justification: Use Web Application Firewalls like Azure WAF to monitor and block suspicious actions. 
-  42. 
-      Description:
-      Justification:
+
+      Justification: Use Web Application Firewalls like Azure WAF to monitor and block suspicious actions.
+
+  42. Bitwarden client may be used to elevate privilege using remote code validation/execution
+      Description: Account user may be able to remotely execute code using Bitwarden
+
+      Justification: Use Web Application Firewalls like Azure WAF to monitor and block suspicious actions.
+
   43. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification: 
+
   44. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification: 
+
   45. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification:  
+
   46. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification:  
+
   47. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification:  
+
   48. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification:  
+
   49. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification: 
+
   50. 
-      Description:
-      Justification:
+      Description: 
+
+      Justification: 
+
   51. 
       Description:
-      Justification:
+
+      Justification: 
+
   52.
       Description:
-      Justification:
-  53.
-      Description:
-      Justification:
+
+      Justification: 
+
+  53. Arrach spoofing a breach reporter 
+      Description: An external agent interrupts data flowing across a trust boundary in either direction.
+
+      Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
+
   54. Elevation Using Impersonation
       Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
       Justification: Enable multi-factor authentication, enforce least-privilege access, and monitor for unusual account activity to prevent elevation using impersonation.
