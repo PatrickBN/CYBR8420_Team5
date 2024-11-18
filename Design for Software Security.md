@@ -156,40 +156,121 @@
      
       Justification: Use a watchdog process to monitor the BitWarden Client and restart it if it becomes unresponsive or crashes. Configure timeouts to detect and respond to failures promptly.
  
-  27. 
-  28. 
-  29. 
-  30. 
-  31. 
-  32. 
-  33. 
-  34. 
-  35. 
-  36. 
-  37. 
-  38. 
-  39. 
-  40. 
-  41. 
+  27.  Data Flow Login Request is Potentially Interrupted
+
+       Description: An external agent interrupts data flow across a trust boundary in either direction.
+
+       Justification: Use end-to-end encryption with TLS 1.3 with multi-factor authentication.
+
+  28. Bitwarden Client May Be Subject to Elevation of Privilege Using Remote Code Execution
+
+      Description: Employee may be able to remotely execute code for Bitwarden Client.
+
+      Justification: Use code signing and verification to confirm only authorized code is executed. Combine with application sandboxing to limit the clients access to critical resources.
+
+  29. Elevation of Changing the Execution Flow in Bitwarden Client
+
+      Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
+
+      Justification: Use input validation and sanitization to prevent malicious data injection.
+
+  30. Cross Site Request Forgery
+
+      Description: Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.
+
+      Justification: Use CSRF tokens for all authenticated changing requests. Also use HTTP security headers for additional protection. 
+
+  31. Spoofing of Destination Data Store Password DB
+
+      Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
+
+      Justification: Use strong authentication between the database server using mechanisms like TLS with server certificate validation.
+
+  32. Potential Excessive Resource Consumption for BitWarden Client or Password DB
+
+      Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
+
+      Justification: Apply rate limiting and request throttling to control the amount of requests that are proccesed in a given timeframe. Use timeouts for all resource-intensive operations to stop deadlocks.
+
+  33. Spoofing the Account user External Entity
+
+      Description: Account user may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
+
+      Justification: Use strong multi-factor authentication, impose secure password policies, and confirm sessions using tokens using tokens that are stored in HTTP cookies.
+
+  34. Elevation using Impersonation
+
+      Description: BitWarden Client may be able to impersonate the context of Account user in order to gain additional privilege.
+
+      Justification: Apply strict RBAC to verify that BitWarden client operates within the permissions that are allowed to the authenticated user and that the user can't elevate its privliges.
+
+  35. Spoofing the BitWarden Client Process
+
+      Description: BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by Account user. Consider using a standard authentication mechanism to identify the destination process.
+
+      Justification: Use TLS to authenticate both the client and the server to certify that only processes can establish communication.
+
+  36. Potential Lack of Input Validation for BitWarden Client
+
+      Description: Data flowing across Account activity may be tampered with by an attacker. This may lead to a denial of service attack against BitWarden Client or an elevation of privilege attack against BitWarden Client or an information disclosure by BitWarden Client. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.
+
+      Justification: Apply strict input validation on all of the data flowing into the BitWarden Client by using a allowlist approach to verify inputs are accepted.
+
+  37. Potential Data Repudiation by BitWarden Client
+
+      Description: BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+
+      Justification: Use secure logging and auditing mechanisms that record the source, timestamp, and a summary of all of the data recieved.
+
+  38. Data Flow Sniffing
+
+      Description: Data flowing across Account activity may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
+
+      Justification: Encrypt all of the data using TLS to make sure the confidentiality and integrity of data that flows across across acount activity.
+
+  39. Potential Process Crash or Stop for BitWarden Client
+
+      Description: BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
+
+      Justification: Use robust error handling and input validation to stop crashes caused by unexpected data.
+
+  40. Data Flow Account activity Is Potentially Interrupted
+
+      Description: An external agent interrupts data flowing across a trust boundary in either direction.
+
+      Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
+
   42. 
   43. 
-54. Elevation Using Impersonation
+  44. 
+  45. 
+  46. 
+  47. 
+  48. 
+  49. 
+  50. 
+  51. 
+  52. 
+  53. 
+  54. 
+  55. 
+56. Elevation Using Impersonation
 Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
 Justification:
 
-55. Cross Site Request Forgery
+57. Cross Site Request Forgery
 Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
 Justification:
 
-56. Elevation by Changing the Execution Flow in Breach information processor
+58. Elevation by Changing the Execution Flow in Breach information processor
 Description:	An attacker may pass data into Breach information processor in order to change the flow of program execution within Breach information processor to the attacker's choosing.
 Justification:
 
-57. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution
+59. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution
 Description:	Breach Reporter may be able to remotely execute code for Breach information processor.
 Justification:
 
-58. Data Flow Breach update Is Potentially Interrupted
+60. Data Flow Breach update Is Potentially Interrupted
 
 Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 Justification:
