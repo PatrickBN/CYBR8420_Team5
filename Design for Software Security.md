@@ -241,8 +241,8 @@
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
   41.  Bitwarden client may be used to elevate privilege using remote code validation/execution
-      Description:
-      Justification:
+      Description: Account user may be able to remotely execute code using Bitwarden
+      Justification: Use Web Application Firewalls like Azure WAF to monitor and block suspicious actions. 
   42. 
       Description:
       Justification:
