@@ -276,34 +276,4 @@
   52.
       Description:
       Justification:
-  54. Elevation Using Impersonation
-Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
-Justification: Enable multi-factor authentication, enforce least-privilege access, and monitor for unusual account activity to prevent elevation using impersonation.
-
-55. Cross Site Request Forgery
-Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
-Justification:	Implement anti-CSRF tokens, validate request origins, and enforce same-site cookie attributes to mitigate Cross-Site Request Forgery.
-
-56. Elevation by Changing the Execution Flow in Breach information processor
-Description:	An attacker may pass data into Breach information processor in order to change the flow of program execution within Breach information processor to the attacker's choosing.
-Justification:	Enforce secure coding practices, validate all inputs, and use runtime protections to prevent execution flow changes in the breach information processor.
-
-57. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution 
-Description:	Breach Reporter may be able to remotely execute code for Breach information processor.
-Justification:	Apply regular security patches, use code signing, and implement strict access controls to prevent remote code execution in the breach information processor.
-
-58. Data Flow Breach update Is Potentially Interrupted  
-Description:	An external agent interrupts data flowing across a trust boundary in either direction.
-Justification:	Use robust error handling, retry mechanisms, and secure communication protocols to prevent interruptions in data flow during breach updates.
-
-59. Potential Process Crash or Stop for Breach information processor  
-Description:	Breach information processor crashes, halts, stops or runs slowly; in all cases violating an availability metric.
-Justification:	Implement fault-tolerant designs, resource monitoring, and automated restarts to mitigate process crashes or stops in the breach information processor.
-
-60. Data Flow Sniffing  
-Description:	Data flowing across Breach update may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
-Justification:	Use end-to-end encryption with TLS to protect data flows from being intercepted or sniffed.
-
-61. Potential Data Repudiation by Breach information processor  
-Description:	Breach information processor claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
-Justification:	Implement logging with tamper-evident mechanisms and use digital signatures to prevent and detect data repudiation by the breach information processor.
+ 
