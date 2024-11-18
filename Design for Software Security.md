@@ -240,37 +240,69 @@
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
+  41.  Bitwarden client may be used to elevate privilege using remote code validation/execution
+      Description:
+      Justification:
   42. 
+      Description:
+      Justification:
   43. 
+      Description:
+      Justification:
   44. 
+      Description:
+      Justification:
   45. 
+      Description:
+      Justification:
   46. 
+      Description:
+      Justification:
   47. 
+      Description:
+      Justification:
   48. 
+      Description:
+      Justification:
   49. 
+      Description:
+      Justification:
   50. 
+      Description:
+      Justification:
   51. 
-  52. 
-  53. 
+      Description:
+      Justification:
+  52.
+      Description:
+      Justification:
   54. 
+      Description:
+      Justification:
   55. 
-56. Elevation Using Impersonation
+      Description:
+      Justification:
+  56.
+      Description:
+      Justification:
+     
+58. Elevation Using Impersonation
 Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
 Justification:
 
-57. Cross Site Request Forgery
+59. Cross Site Request Forgery
 Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
 Justification:
 
-58. Elevation by Changing the Execution Flow in Breach information processor
+60. Elevation by Changing the Execution Flow in Breach information processor
 Description:	An attacker may pass data into Breach information processor in order to change the flow of program execution within Breach information processor to the attacker's choosing.
 Justification:
 
-59. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution
+61. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution
 Description:	Breach Reporter may be able to remotely execute code for Breach information processor.
 Justification:
 
-60. Data Flow Breach update Is Potentially Interrupted
+62. Data Flow Breach update Is Potentially Interrupted
 
 Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 Justification:
