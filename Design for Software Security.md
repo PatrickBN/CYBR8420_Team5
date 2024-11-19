@@ -8,7 +8,7 @@
 
   The DFD we created cover the main use cases we identified earlier on. While most of the use cases were covered by the first diagram the second diagram covers the two use cases that require data being transmitted to and from outside the BitWarden system. This required the second DFD as we were introducing a new possible threat vector from the data coming from outside the BitWarden system. 
   
-  The Microsoft threat modelling tool was used to create the list of possible threats from the DFD, those threats are listed below with each having a description of the threat as well as the justification for mitigation by which it is mitigated through BitWarden or could be mitigated. The Gaps noted in the mitigations will be listed below in the second part where we look at the gaps in BitWarden's mitigation. 
+  The Microsoft threat modelling tool was used to create the list of possible threats from the DFD, those threats are listed below with each having a *description* of the threat as well as the *justification* for mitigation by which it is mitigated through BitWarden or could be mitigated. The Gaps noted in the mitigations will be listed below in the second part where we look at the gaps in BitWarden's mitigation. 
   
   ### 3. Threat review and Mitigation
 
