@@ -280,13 +280,13 @@
 
       Description: Account user may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Account user. Consider using a standard authentication mechanism to identify the external entity.
 
-      Justification:  
+      Justification: Use whitelisting to approve specific email addresses that are verified by domains to ensure verification.
 
   48. External Entity Account user Potentially Denies Receiving Data
 
       Description: Account user claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
-      Justification:  
+      Justification: Use automatic receipts to ensure confirmation from sensitive/critical data; that can be verified by the system and finance' encouraging authentication and verification.
 
   49. Data Flow Breach answer Is Potentially Interrupted
 
