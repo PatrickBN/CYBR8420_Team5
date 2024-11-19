@@ -250,31 +250,31 @@
 
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
-      Justification: 
+      Justification: Use crytographic signatures to verify that the code has not been exploited or tampered with; ensuring integrity.
 
   43. Cross Site Request Forgery
 
       Description: Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
 
-      Justification: 
+      Justification: Use CAPTCHA for forcing human interaction, ensuring that it is a legitimate user and not an automated bot.
 
   44. Elevation Using Impersonation
 
       Description: BitWarden Client may be able to impersonate the context of Breach information processor in order to gain additional privilege.
 
-      Justification: 
+      Justification: Use OAuth for managing identity authentication.
 
   45. Spoofing of Source Data Store Database of breaches
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to incorrect data delivered to Breach information processor. Consider using a standard authentication mechanism to identify the source data store.
 
-      Justification:  
+      Justification:  Use SHA-256 to ensure data is not tampered with or altered in any notion.
 
   46. Weak Access Control for a Resource
 
       Description: Improper data protection of Database of breaches can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
-      Justification:  
+      Justification:  Use ultrasonic scanners to secure information for the associated party, strengthening authentication.
 
   47. Spoofing of the Account user External Destination Entity
 
@@ -321,7 +321,6 @@
   54. Elevation Using Impersonation
       Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
       Justification: Enable multi-factor authentication, enforce least-privilege access, and monitor for unusual account activity to prevent elevation using impersonation.
-      
   55. Cross Site Request Forgery
       Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to       web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.        The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link       in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site       and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
       Justification:	Implement anti-CSRF tokens, validate request origins, and enforce same-site cookie attributes to mitigate Cross-Site Request Forgery.
