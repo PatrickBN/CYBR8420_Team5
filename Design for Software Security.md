@@ -248,73 +248,73 @@
 
   42. Elevation by Changing the Execution Flow in BitWarden Client 
 
-      Description: 
+      Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
       Justification: 
 
   43. Cross Site Request Forgery
 
-      Description: 
+      Description: Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
 
       Justification: 
 
   44. Elevation Using Impersonation
 
-      Description: 
+      Description: BitWarden Client may be able to impersonate the context of Breach information processor in order to gain additional privilege.
 
       Justification: 
 
   45. Spoofing of Source Data Store Database of breaches
 
-      Description: 
+      Description: Database of breaches may be spoofed by an attacker and this may lead to incorrect data delivered to Breach information processor. Consider using a standard authentication mechanism to identify the source data store.
 
       Justification:  
 
   46. Weak Access Control for a Resource
 
-      Description: 
+      Description: Improper data protection of Database of breaches can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
       Justification:  
 
   47. Spoofing of the Account user External Destination Entity
 
-      Description: 
+      Description: Account user may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Account user. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification:  
 
   48. External Entity Account user Potentially Denies Receiving Data
 
-      Description: 
+      Description: Account user claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
       Justification:  
 
   49. Data Flow Breach answer Is Potentially Interrupted
 
-      Description: 
+      Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: 
 
   50. Spoofing of Destination Data Store Database of breaches
 
-      Description: 
+      Description: Database of breaches may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Database of breaches. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: 
 
   51. Potential Excessive Resource Consumption for Breach information processor or Database of breaches
 
-      Description:
+      Description: Does Breach information processor or Database of breaches take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout.
 
       Justification: 
 
   52. Elevation Using Impersonation
 
-      Description:
+      Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
       Justification: 
 
   53. Spoofing the Breach Reporter External Entity 
 
-      Description: An external agent interrupts data flowing across a trust boundary in either direction.
+      Description: Breach Reporter may be spoofed by an attacker and this may lead to unauthorized access to Breach information processor. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
