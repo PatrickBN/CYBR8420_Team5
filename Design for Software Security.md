@@ -88,7 +88,7 @@
      
       Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
      
-      Justification: Use firewalls and Network Access Control Lists (ACLs) to limit communication to authorized IP addresses and ports.
+      Justification: The 2fa authentication is logged and encryption can be used to prevent data sniffing.
 
   16. Spoofing of Source Data Store Password DB
      
@@ -118,7 +118,7 @@
      
       Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
      
-      Justification: Using encryption or firewall controls to prevent interception of the data.
+      Justification: The 2fa authentication is logged and encryption can be used to prevent data sniffing.
  
   21. Spoofing the Employee External Entity
      
@@ -130,31 +130,31 @@
      
       Description: 	BitWarden Client may be able to impersonate the context of Employee in order to gain additional privilege.
      
-      Justification: Require reauthentication (e.g., entering a password or MFA) whenever a user or process requests elevated privileges and monitor for patterns of privilege escalation to detect anomalies. Monitor for unusual patterns, such as privilege escalation attempts outside normal working hours. Use machine learning tools to identify deviations from typical user behavior.
+      Justification: Authentication is required in order to gain additional privilege
   
   24. Potential Lack of Input Validation for BitWarden Client
      
       Description: 	Data flowing across Login Request may be tampered with by an attacker. 
      
-      Justification: Validate inputs at the client side and revalidate them on the server side. Enforce strict limits on input size to prevent buffer overflows.
+      Justification: BitWarden uses a validation Service to validate input a user's input is never executed.
  
   25. Potential Data Repudiation by BitWarden Client
      
       Description: 	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
-      Justification: Require the BitWarden Client to digitally sign all transmitted data using a private key. The server verifies the signature using the client’s public key.
+      Justification: BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
   
   26. Data Flow Sniffing
      
       Description: 	Data flowing across Login Request may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. 
      
-      Justification: Use strong encryption protocols to encrypt all data in transit using the latest version of Transport Layer Security.
+      Justification: Sensitive data isn't stored locally and all data sent across a network is encrypted.
  
   27. Potential Process Crash or Stop for BitWarden Client
      
       Description: 	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
-      Justification: Use a watchdog process to monitor the BitWarden Client and restart it if it becomes unresponsive or crashes. Configure timeouts to detect and respond to failures promptly.
+      Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
  
   28.  Data Flow Login Request is Potentially Interrupted
 
@@ -196,37 +196,37 @@
 
       Description: BitWarden Client may be able to impersonate the context of Account user in order to gain additional privilege.
 
-      Justification: Apply strict RBAC to verify that BitWarden client operates within the permissions that are allowed to the authenticated user and that the user can't elevate its privliges.
+      Justification: Authentication is required in order to gain additional privilege
       
   39. Potential Lack of Input Validation for BitWarden Client
 
       Description: Data flowing across Account activity may be tampered with by an attacker.
 
-      Justification: Apply strict input validation on all of the data flowing into the BitWarden Client by using a allowlist approach to verify inputs are accepted.
+      Justification: BitWarden uses a validation Service to validate input a user's input is never executed.
 
   40. Potential Data Repudiation by BitWarden Client
 
       Description: BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
-      Justification: Use secure logging and auditing mechanisms that record the source, timestamp, and a summary of all of the data recieved.
+      Justification: BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
 
   41. Data Flow Sniffing
 
       Description: Data flowing across Account activity may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
 
-      Justification: Encrypt all of the data using TLS to make sure the confidentiality and integrity of data that flows across across acount activity.
+      Justification: Sensitive data isn't stored locally and all data sent across a network is encrypted.
 
   42. Potential Process Crash or Stop for BitWarden Client
 
       Description: BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
-      Justification: Use robust error handling and input validation to stop crashes caused by unexpected data.
+      Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
 
   43. Data Flow Account activity Is Potentially Interrupted
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
-      Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
+      Justification: The external agent is logged and encryption can be used to prevent data sniffing.
 
   44. Bitwarden client may be used to elevate privilege using remote code validation/execution
 
@@ -244,7 +244,7 @@
 
       Description: BitWarden Client may be able to impersonate the context of Breach information processor in order to gain additional privilege.
 
-      Justification: Use OAuth for managing identity authentication.
+      Justification: Authentication is required in order to gain additional privilege
 
   47. Spoofing of Source Data Store Database of breaches
 
@@ -274,7 +274,7 @@
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
-      Justification: Use Bitwarden's VPNs for private communication and backups for high availability, incase of disruption.
+      Justification: The external agent is logged and encryption can be used to prevent data sniffing.
 
   52. Spoofing of Destination Data Store Database of breaches
 
@@ -292,7 +292,7 @@
 
       Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
-      Justification: Use Bitwarden's MFA to add a second layer of verfication, and RBAC to monitor all actions.
+      Justification: Authentication is required in order to gain additional privilege
 
   55. Spoofing the Breach Reporter External Entity 
 
@@ -323,31 +323,31 @@
 
       Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 
-      Justification:	Use robust error handling, retry mechanisms, and secure communication protocols to prevent interruptions in data flow during breach updates.
+      Justification:	The external agent is logged and encryption can be used to prevent data sniffing.
       
   60. Potential Process Crash or Stop for Breach information processor  
 
       Description:	Breach information processor crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
-      Justification:	Implement fault-tolerant designs, resource monitoring, and automated restarts to mitigate process crashes or stops in the breach information processor.
+      Justification:	Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
       
   61. Data Flow Sniffing  
 
       Description:	Data flowing across Breach update may be sniffed by an attacker.
 
-       Justification:	Use end-to-end encryption with TLS to protect data flows from being intercepted or sniffed.
+       Justification:	Sensitive data isn't stored locally and all data sent across a network is encrypted.
       
   62. Potential Data Repudiation by Breach information processor  
 
        Description:	Breach information processor claims that it did not receive data from a source outside the trust boundary.
 
-      Justification:	Implement logging with tamper-evident mechanisms and use digital signatures to prevent and detect data repudiation by the breach information processor.
+      Justification:	BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
       
   63. Potential Lack of Input Validation for Breach information processor  
 
        Description:	Data flowing across Breach update may be tampered with by an attacker.
       
-      Justification:	Enforce strict input validation and sanitize all inputs to prevent exploitation in the breach information processor.
+      Justification:	BitWarden uses a validation Service to validate input a user's input is never executed.
       
   64. Spoofing the Breach information processor Process 
 
@@ -359,7 +359,7 @@
 
        Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 
-       Justification:	Implement redundant communication channels and use message acknowledgment protocols to ensure data flow update confirmation is not interrupted.
+       Justification:	The external agent is logged and encryption can be used to prevent data sniffing.
       
   66. External Entity Breach Reporter Potentially Denies Receiving Data  
 
