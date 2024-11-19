@@ -12,362 +12,362 @@
   
   ## 3. Threat review and Mitigation
 
-  1. Spoofing the MFA External Entity
+  1. Spoofing the MFA External Entity ID:1
      
      Description:	MFA may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
      
      Justification: Use of digital certificates ensures proper authentication
 
-  2. Elevation Using Impersonation
+  2. Elevation Using Impersonation ID:2
      
      Description:	BitWarden Client may be able to impersonate the context of MFA in order to gain additional privilege.
      
      Justification: Authentication is required in order to gain additional privilege
 
-  3. Spoofing the BitWarden Client Process
+  3. Spoofing the BitWarden Client Process ID:3
      
      Description:	BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by MFA. Consider using a standard authentication mechanism to identify the destination process.
      
      Justification: Use of digital certificates ensures proper authentication
      
-  4. Potential Lack of Input Validation for BitWarden Client
+  4. Potential Lack of Input Validation for BitWarden Client ID:4
      
      Description:	Data flowing across 2fa may be tampered with by an attacker. This may lead to a denial of service attack against BitWarden Client or an elevation of privilege attack against BitWarden Client or an information disclosure by BitWarden Client.
      
      Justification: BitWarden uses a validation Service to validate input a user's input is never executed.
      
-  5. Potential Data Repudiation by BitWarden Client
+  5. Potential Data Repudiation by BitWarden Client ID:5
      
      Description:	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
      Justification: BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
      
-  6. Data Flow Sniffing
+  6. Data Flow Sniffing ID:6
      
      Description:	Data flowing across 2fa may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
      
      Justification: Sensitive data isn't stored locally and all data sent across a network is encrypted.
      
-  7. Potential Process Crash or Stop for BitWarden Client
+  7. Potential Process Crash or Stop for BitWarden Client ID:7
      
      Description:	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
      Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
 
-  8. Data Flow 2fa Is Potentially Interrupted
+  8. Data Flow 2fa Is Potentially Interrupted ID:8
 
      Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: The 2fa authentication is logged and encryption can be used to prevent data sniffing.
      
-  9. BitWarden Client May be Subject to Elevation of Privilege Using Remote Code Execution
+  9. BitWarden Client May be Subject to Elevation of Privilege Using Remote Code Execution ID:9
      
       Description: MFA may be able to remotely execute code for BitWarden Client.
      
       Justification: Input validation and sanitization is used to disallow local code execution.
      
-  10. Elevation by Changing the Execution Flow in BitWarden Client
+  10. Elevation by Changing the Execution Flow in BitWarden Client ID:10
      
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
      
       Justification: Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
       
-  13. Spoofing of the MFA External Destination Entity
+  13. Spoofing of the MFA External Destination Entity ID:12
      
       Description: MFA may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of MFA.
      
       Justification: The MFA uses authentication signatures to prevent spoofing.
       
-  14. External Entity MFA Potentially Denies Receiving Data
+  14. External Entity MFA Potentially Denies Receiving Data ID:13
      
       Description: 	MFA claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
       Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
      
- 15. Data Flow 2fa confirmation Is Potentially Interrupted
+ 15. Data Flow 2fa confirmation Is Potentially Interrupted ID:14
      
       Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
      
       Justification: The 2fa authentication is logged and encryption can be used to prevent data sniffing.
 
-  16. Spoofing of Source Data Store Password DB
+  16. Spoofing of Source Data Store Password DB ID:15
      
       Description: 	Password DB may be spoofed by an attacker and this may lead to incorrect data delivered to BitWarden Client. Consider using a standard authentication mechanism to identify the source data store.
      
       Justification: Use of digital certificates ensures proper authentication
  
-  17. Weak Access Control for a Resource
+  17. Weak Access Control for a Resource ID:16
      
       Description: 	Improper data protection of Password DB can allow an attacker to read information not intended for disclosure. Review authorization settings.
      
       Justification: Use ultrasonic scanners to secure information for the associated party, strengthening authentication.
  
-  18. Spoofing of the Employee External Destination Entity
+  18. Spoofing of the Employee External Destination Entity ID:17
      
       Description: 	Employee may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Employee. Consider using a standard authentication mechanism to identify the external entity.
      
       Justification: Use of digital certificates ensures proper authentication
  
-  19. External Entity Employee Potentially Denies Receiving Data
+  19. External Entity Employee Potentially Denies Receiving Data ID:18
      
       Description: 	Employee claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
       Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
 
-  20. Data Flow Key & confirmation Is Potentially Interrupted
+  20. Data Flow Key & confirmation Is Potentially Interrupted ID:19
      
       Description: 	An external agent interrupts data flowing across a trust boundary in either direction.
      
       Justification: The 2fa authentication is logged and encryption can be used to prevent data sniffing.
  
-  21. Spoofing the Employee External Entity
+  21. Spoofing the Employee External Entity ID:20
      
       Description: 	Employee may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
      
       Justification: Use of digital certificates ensures proper authentication
  
-  22. Elevation Using Impersonation
+  22. Elevation Using Impersonation ID:21
      
       Description: 	BitWarden Client may be able to impersonate the context of Employee in order to gain additional privilege.
      
       Justification: Authentication is required in order to gain additional privilege
   
-  24. Potential Lack of Input Validation for BitWarden Client
+  24. Potential Lack of Input Validation for BitWarden Client ID:23
      
       Description: 	Data flowing across Login Request may be tampered with by an attacker. 
      
       Justification: BitWarden uses a validation Service to validate input a user's input is never executed.
  
-  25. Potential Data Repudiation by BitWarden Client
+  25. Potential Data Repudiation by BitWarden Client ID:24
      
       Description: 	BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
       Justification: BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
   
-  26. Data Flow Sniffing
+  26. Data Flow Sniffing ID:25
      
       Description: 	Data flowing across Login Request may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow. 
      
       Justification: Sensitive data isn't stored locally and all data sent across a network is encrypted.
  
-  27. Potential Process Crash or Stop for BitWarden Client
+  27. Potential Process Crash or Stop for BitWarden Client ID:26
      
       Description: 	BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
      
       Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
  
-  28.  Data Flow Login Request is Potentially Interrupted
+  28.  Data Flow Login Request is Potentially Interrupted ID:27
 
        Description: An external agent interrupts data flow across a trust boundary in either direction.
 
        Justification: Use end-to-end encryption with TLS 1.3 with multi-factor authentication.
 
-  29. Bitwarden Client May Be Subject to Elevation of Privilege Using Remote Code Execution
+  29. Bitwarden Client May Be Subject to Elevation of Privilege Using Remote Code Execution ID:28
 
       Description: Employee may be able to remotely execute code for Bitwarden Client.
 
       Justification: Input validation and sanitization is used to disallow local code execution.
 
-  30. Elevation of Changing the Execution Flow in Bitwarden Client
+  30. Elevation of Changing the Execution Flow in Bitwarden Client ID:29
 
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
       Justification: Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
 
-  32. Spoofing of Destination Data Store Password DB
+  32. Spoofing of Destination Data Store Password DB ID:31
 
       Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: Use of digital certificates ensures proper authentication
       
-  34. Potential Excessive Resource Consumption for BitWarden Client or Password DB
+  34. Potential Excessive Resource Consumption for BitWarden Client or Password DB ID:32
 
       Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: Apply rate limiting and request throttling to control the amount of requests that are proccesed in a given timeframe. Use timeouts for all resource-intensive operations to stop deadlocks.
 
-  35. Spoofing the Account user External Entity
+  35. Spoofing the Account user External Entity ID:33
 
       Description: Account user may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use of digital certificates ensures proper authentication
 
-  36. Elevation using Impersonation
+  36. Elevation using Impersonation ID:34
 
       Description: BitWarden Client may be able to impersonate the context of Account user in order to gain additional privilege.
 
       Justification: Authentication is required in order to gain additional privilege
       
-  39. Potential Lack of Input Validation for BitWarden Client
+  39. Potential Lack of Input Validation for BitWarden Client ID:36
 
       Description: Data flowing across Account activity may be tampered with by an attacker.
 
       Justification: BitWarden uses a validation Service to validate input a user's input is never executed.
 
-  40. Potential Data Repudiation by BitWarden Client
+  40. Potential Data Repudiation by BitWarden Client ID:37
 
       Description: BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
       Justification: BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
 
-  41. Data Flow Sniffing
+  41. Data Flow Sniffing ID:38
 
       Description: Data flowing across Account activity may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
 
       Justification: Sensitive data isn't stored locally and all data sent across a network is encrypted.
 
-  42. Potential Process Crash or Stop for BitWarden Client
+  42. Potential Process Crash or Stop for BitWarden Client ID:39
 
       Description: BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
       Justification: Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
 
-  43. Data Flow Account activity Is Potentially Interrupted
+  43. Data Flow Account activity Is Potentially Interrupted ID:40
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: The external agent is logged and encryption can be used to prevent data sniffing.
 
-  44. Bitwarden client may be used to elevate privilege using remote code validation/execution
+  44. Bitwarden client may be used to elevate privilege using remote code validation/execution ID:41
 
       Description: Account user may be able to remotely execute code using Bitwarden
 
       Justification: Input validation and sanitization is used to disallow local code execution.
 
-  45. Elevation by Changing the Execution Flow in BitWarden Client 
+  45. Elevation by Changing the Execution Flow in BitWarden Client  ID:42
 
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
       Justification: Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
 
-  46. Elevation Using Impersonation
+  46. Elevation Using Impersonation ID:44
 
       Description: BitWarden Client may be able to impersonate the context of Breach information processor in order to gain additional privilege.
 
       Justification: Authentication is required in order to gain additional privilege
 
-  47. Spoofing of Source Data Store Database of breaches
+  47. Spoofing of Source Data Store Database of breaches ID:45
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to incorrect data delivered to Breach information processor. Consider using a standard authentication mechanism to identify the source data store.
 
       Justification:  Use of digital certificates ensures proper authentication
 
-  48. Weak Access Control for a Resource
+  48. Weak Access Control for a Resource ID:46
 
       Description: Improper data protection of Database of breaches can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
       Justification:  Use ultrasonic scanners to secure information for the associated party, strengthening authentication.
 
-  49. Spoofing of the Account user External Destination Entity
+  49. Spoofing of the Account user External Destination Entity ID:47
 
       Description: Account user may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Account user. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use Bitwarden whitelisting to approve specific email addresses that are verified by domains to ensure verification.
 
-  50. External Entity Account user Potentially Denies Receiving Data
+  50. External Entity Account user Potentially Denies Receiving Data ID:48
 
       Description: Account user claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
       Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
 
-  51. Data Flow Breach answer Is Potentially Interrupted
+  51. Data Flow Breach answer Is Potentially Interrupted ID:49
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: The external agent is logged and encryption can be used to prevent data sniffing.
 
-  52. Spoofing of Destination Data Store Database of breaches
+  52. Spoofing of Destination Data Store Database of breaches ID:50
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Database of breaches. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: Use HTTPS with strong TLS configs to secure data connections.
 
-  53. Potential Excessive Resource Consumption for Breach information processor or Database of breaches
+  53. Potential Excessive Resource Consumption for Breach information processor or Database of breaches ID:51
 
       Description: Does Breach information processor or Database of breaches take explicit steps to control resource consumption? 
 
       Justification: Use CDN to cache data closer to users that use them to reduce resource scaling. 
 
-  54. Elevation Using Impersonation
+  54. Elevation Using Impersonation ID:52
 
       Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
       Justification: Authentication is required in order to gain additional privilege
 
-  55. Spoofing the Breach Reporter External Entity 
+  55. Spoofing the Breach Reporter External Entity  ID:53
 
       Description: Breach Reporter may be spoofed by an attacker and this may lead to unauthorized access to Breach information processor. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
-  56. Elevation Using Impersonation
+  56. Elevation Using Impersonation ID:54
 
        Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
 
       Justification: Enable multi-factor authentication, enforce least-privilege access, and monitor for unusual account activity to prevent elevation using impersonation.
       
       
-  57. Elevation by Changing the Execution Flow in Breach information processor
+  57. Elevation by Changing the Execution Flow in Breach information processor ID:56
 
       Description:	An attacker may pass data into Breach information processor in order to change the flow of program execution within Breach information processor to the attacker's choosing.
 
       Justification:	Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
       
-  58. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution 
+  58. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution  ID:57
 
       Description:	Breach Reporter may be able to remotely execute code for Breach information processor.
 
       Justification:	Apply regular security patches, use code signing, and implement strict access controls to prevent remote code execution in the breach information processor.
       
-  59. Data Flow Breach update Is Potentially Interrupted  
+  59. Data Flow Breach update Is Potentially Interrupted   ID:58
 
       Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification:	The external agent is logged and encryption can be used to prevent data sniffing.
       
-  60. Potential Process Crash or Stop for Breach information processor  
+  60. Potential Process Crash or Stop for Breach information processor   ID:59
 
       Description:	Breach information processor crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
       Justification:	Currently BitWarden crashes with an error message, current coding practices dictate that this be necessary in the case of tampering.
       
-  61. Data Flow Sniffing  
+  61. Data Flow Sniffing   ID:60
 
       Description:	Data flowing across Breach update may be sniffed by an attacker.
 
        Justification:	Sensitive data isn't stored locally and all data sent across a network is encrypted.
       
-  62. Potential Data Repudiation by Breach information processor  
+  62. Potential Data Repudiation by Breach information processor   ID:61
 
        Description:	Breach information processor claims that it did not receive data from a source outside the trust boundary.
 
       Justification:	BitWarden replaces non-existing files and any files that have been tampered with cause an error that leads to a crash.
       
-  63. Potential Lack of Input Validation for Breach information processor  
+  63. Potential Lack of Input Validation for Breach information processor   ID:62
 
        Description:	Data flowing across Breach update may be tampered with by an attacker.
       
       Justification:	BitWarden uses a validation Service to validate input a user's input is never executed.
       
-  64. Spoofing the Breach information processor Process 
+  64. Spoofing the Breach information processor Process  ID:63
 
        Description:	Breach information processor may be spoofed by an attacker and this may lead to information disclosure by Breach Reporter.
 
       Justification:	Use of digital certificates ensures proper authentication
       
-  65. Data Flow Update confirmation Is Potentially Interrupted  
+  65. Data Flow Update confirmation Is Potentially Interrupted   ID:64
 
        Description:	An external agent interrupts data flowing across a trust boundary in either direction.
 
        Justification:	The external agent is logged and encryption can be used to prevent data sniffing.
       
-  66. External Entity Breach Reporter Potentially Denies Receiving Data  
+  66. External Entity Breach Reporter Potentially Denies Receiving Data   ID:65
 
       Description:	Breach Reporter claims that it did not receive data from a process on the other side of the trust boundary. 
 
       Justification:	Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
       
-  67. Spoofing of the Breach Reporter External Destination Entity 
+  67. Spoofing of the Breach Reporter External Destination Entity  ID:66
 
        Description:	Breach Reporter may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Breach Reporter. 
 
