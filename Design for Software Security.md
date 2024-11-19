@@ -292,25 +292,25 @@
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
-      Justification: 
+      Justification: Use VPNs for private communication and backups for high availability, incase of disruption.
 
   50. Spoofing of Destination Data Store Database of breaches
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Database of breaches. Consider using a standard authentication mechanism to identify the destination data store.
 
-      Justification: 
+      Justification: Use HTTPS with strong TLS configs to secure data connections.
 
   51. Potential Excessive Resource Consumption for Breach information processor or Database of breaches
 
       Description: Does Breach information processor or Database of breaches take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout.
 
-      Justification: 
+      Justification: Use CDN to cache data closer to users that use them to reduce resource scaling. 
 
   52. Elevation Using Impersonation
 
       Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
-      Justification: 
+      Justification: Use MFA to add a second layer of verfication, and RBAC to monitor all actions.
 
   53. Spoofing the Breach Reporter External Entity 
 
