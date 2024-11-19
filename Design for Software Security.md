@@ -82,7 +82,7 @@
      
       Description: 	MFA claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
-      Justification: The BitWarden MFA and desktop client both keep logs.
+      Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
      
  15. Data Flow 2fa confirmation Is Potentially Interrupted
      
@@ -100,7 +100,7 @@
      
       Description: 	Improper data protection of Password DB can allow an attacker to read information not intended for disclosure. Review authorization settings.
      
-      Justification: Conduct regular vulnerability scans and penetration tests on the database.
+      Justification: Use ultrasonic scanners to secure information for the associated party, strengthening authentication.
  
   18. Spoofing of the Employee External Destination Entity
      
@@ -112,7 +112,7 @@
      
       Description: 	Employee claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
      
-      Justification: Sign all transmitted data with a sender’s private key and require the recipient (External Entity Employee) to acknowledge receipt by signing with their private key.
+      Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
 
   20. Data Flow Key & confirmation Is Potentially Interrupted
      
@@ -268,7 +268,7 @@
 
       Description: Account user claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
-      Justification: Use automatic receipts to ensure confirmation from sensitive/critical data; that can be verified by the system and finance' encouraging authentication and verification.
+      Justification: Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
 
   51. Data Flow Breach answer Is Potentially Interrupted
 
