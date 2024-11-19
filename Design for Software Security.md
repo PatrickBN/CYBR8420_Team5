@@ -323,41 +323,79 @@
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
   54. Elevation Using Impersonation
-      Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
+
+       Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
+
       Justification: Enable multi-factor authentication, enforce least-privilege access, and monitor for unusual account activity to prevent elevation using impersonation.
-  55. Cross Site Request Forgery
-      Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to       web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.        The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link       in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site       and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
+      
+  56. Cross Site Request Forgery
+
+      Description:	Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site. 
+
       Justification:	Implement anti-CSRF tokens, validate request origins, and enforce same-site cookie attributes to mitigate Cross-Site Request Forgery.
-  56. Elevation by Changing the Execution Flow in Breach information processor
+      
+  57. Elevation by Changing the Execution Flow in Breach information processor
+
       Description:	An attacker may pass data into Breach information processor in order to change the flow of program execution within Breach information processor to the attacker's choosing.
+
       Justification:	Enforce secure coding practices, validate all inputs, and use runtime protections to prevent execution flow changes in the breach information processor.
-  57. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution 
+      
+  58. Breach information processor May be Subject to Elevation of Privilege Using Remote Code Execution 
+
       Description:	Breach Reporter may be able to remotely execute code for Breach information processor.
+
       Justification:	Apply regular security patches, use code signing, and implement strict access controls to prevent remote code execution in the breach information processor.
-  58. Data Flow Breach update Is Potentially Interrupted  
+      
+  59. Data Flow Breach update Is Potentially Interrupted  
+
       Description:	An external agent interrupts data flowing across a trust boundary in either direction.
+
       Justification:	Use robust error handling, retry mechanisms, and secure communication protocols to prevent interruptions in data flow during breach updates.
-  59. Potential Process Crash or Stop for Breach information processor  
+      
+  60. Potential Process Crash or Stop for Breach information processor  
+
       Description:	Breach information processor crashes, halts, stops or runs slowly; in all cases violating an availability metric.
+
       Justification:	Implement fault-tolerant designs, resource monitoring, and automated restarts to mitigate process crashes or stops in the breach information processor.
-  60. Data Flow Sniffing  
+      
+  61. Data Flow Sniffing  
+
       Description:	Data flowing across Breach update may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
-      Justification:	Use end-to-end encryption with TLS to protect data flows from being intercepted or sniffed.
-  61. Potential Data Repudiation by Breach information processor  
-      Description:	Breach information processor claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+
+       Justification:	Use end-to-end encryption with TLS to protect data flows from being intercepted or sniffed.
+      
+  62. Potential Data Repudiation by Breach information processor  
+
+       Description:	Breach information processor claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+
       Justification:	Implement logging with tamper-evident mechanisms and use digital signatures to prevent and detect data repudiation by the breach information processor.
-  62. Potential Lack of Input Validation for Breach information processor  
-      Description:	Data flowing across Breach update may be tampered with by an attacker. This may lead to a denial of service attack against Breach information processor or an elevation of privilege attack against Breach information processor or an information disclosure by Breach information processor.             Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach.
+      
+  63. Potential Lack of Input Validation for Breach information processor  
+
+       Description:	Data flowing across Breach update may be tampered with by an attacker.
+      
       Justification:	Enforce strict input validation and sanitize all inputs to prevent exploitation in the breach information processor.
-  63. Spoofing the Breach information processor Process 
-      Description:	Breach information processor may be spoofed by an attacker and this may lead to information disclosure by Breach Reporter. Consider using a standard authentication mechanism to identify the destination process.
-      Justification:	Use strong authentication, cryptographic signing, and secure communication channels to prevent spoofing of the breach information processor process. 
-  64. Data Flow Update confirmation Is Potentially Interrupted  
-      Description:	An external agent interrupts data flowing across a trust boundary in either direction.
-      Justification:	Implement redundant communication channels and use message acknowledgment protocols to ensure data flow update confirmation is not interrupted.
-  65. External Entity Breach Reporter Potentially Denies Receiving Data  
+      
+  64. Spoofing the Breach information processor Process 
+
+       Description:	Breach information processor may be spoofed by an attacker and this may lead to information disclosure by Breach Reporter. Consider using a standard authentication mechanism to identify the destination process.
+
+      Justification:	Use strong authentication, cryptographic signing, and secure communication channels to prevent spoofing of the breach information processor process.
+      
+  65. Data Flow Update confirmation Is Potentially Interrupted  
+
+       Description:	An external agent interrupts data flowing across a trust boundary in either direction.
+
+       Justification:	Implement redundant communication channels and use message acknowledgment protocols to ensure data flow update confirmation is not interrupted.
+      
+  66. External Entity Breach Reporter Potentially Denies Receiving Data  
+
       Description:	Breach Reporter claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
+
       Justification:	Use reliable transmission protocols, acknowledge receipt with digital signatures, and implement logging to prevent denial of data receipt by external entity breach reporters.
-  66. Spoofing of the Breach Reporter External Destination Entity 
-      Description:	Breach Reporter may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Breach Reporter. Consider using a standard authentication mechanism to identify the external entity.
-      Justification:	Implement mutual authentication and use secure, encrypted communication channels to prevent spoofing of the breach reporter external destination entity. 
+      
+  67. Spoofing of the Breach Reporter External Destination Entity 
+
+       Description:	Breach Reporter may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Breach Reporter. Consider using a standard authentication mechanism to identify the external entity.
+
+       Justification:	Implement mutual authentication and use secure, encrypted communication channels to prevent spoofing of the breach reporter external destination entity. 
