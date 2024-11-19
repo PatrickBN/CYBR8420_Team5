@@ -391,4 +391,4 @@
       - Threats: 4, 21, 32, 56
   
   ### 4.3 Reflections
-  The team worked on this early, with only 2 DFD to make most of the work was done well before the due day. We were much better than previously about 
+  The team worked on this early, with only 2 DFD to make most of the work was done well before the due day. We were much better than previously about meeting outside of our usual weekly meeting and working on the threat report together. As a team we have pulled together in these final stages and began to operate as a group, we think this report turned out well and are ready to finish the project in the next deliverable. 
