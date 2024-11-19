@@ -94,7 +94,7 @@
      
       Description: 	Password DB may be spoofed by an attacker and this may lead to incorrect data delivered to BitWarden Client. Consider using a standard authentication mechanism to identify the source data store.
      
-      Justification: Require the password database to authenticate itself to the BitWarden client using a standard authentication protocol, such as PKI (Public Key Infrastructure) using server-side certificates.
+      Justification: Use of digital certificates ensures proper authentication
  
   17. Weak Access Control for a Resource
      
@@ -106,7 +106,7 @@
      
       Description: 	Employee may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Employee. Consider using a standard authentication mechanism to identify the external entity.
      
-      Justification: Use mutual TLS (Transport Layer Security) to authenticate both the employee’s device/system and the external destination entity.
+      Justification: Use of digital certificates ensures proper authentication
  
   19. External Entity Employee Potentially Denies Receiving Data
      
@@ -124,19 +124,13 @@
      
       Description: 	Employee may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
      
-      Justification: Establish multiple, independent channels for key exchange and confirmation or Use protocols like TCP for automatic retransmission of lost packets.
+      Justification: Use of digital certificates ensures proper authentication
  
   22. Elevation Using Impersonation
      
       Description: 	BitWarden Client may be able to impersonate the context of Employee in order to gain additional privilege.
      
       Justification: Require reauthentication (e.g., entering a password or MFA) whenever a user or process requests elevated privileges and monitor for patterns of privilege escalation to detect anomalies. Monitor for unusual patterns, such as privilege escalation attempts outside normal working hours. Use machine learning tools to identify deviations from typical user behavior.
-  
-  23. Spoofing the BitWarden Client Process
-     
-      Description: 	BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by Employee. Consider using a standard authentication mechanism to identify the destination process.
-     
-      Justification: Regularly test the BitWarden Client for vulnerabilities that could enable spoofing. Apply hardening techniques, such as stripping unnecessary metadata from binaries and using memory protection mechanisms.
   
   24. Potential Lack of Input Validation for BitWarden Client
      
@@ -184,135 +178,129 @@
 
       Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
 
-      Justification: Use strong authentication between the database server using mechanisms like TLS with server certificate validation.
-
-  33. Potential Excessive Resource Consumption for BitWarden Client or Password DB
+      Justification: Use of digital certificates ensures proper authentication
+      
+  34. Potential Excessive Resource Consumption for BitWarden Client or Password DB
 
       Description: Password DB may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Password DB. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: Apply rate limiting and request throttling to control the amount of requests that are proccesed in a given timeframe. Use timeouts for all resource-intensive operations to stop deadlocks.
 
-  34. Spoofing the Account user External Entity
+  35. Spoofing the Account user External Entity
 
       Description: Account user may be spoofed by an attacker and this may lead to unauthorized access to BitWarden Client. Consider using a standard authentication mechanism to identify the external entity.
 
-      Justification: Use strong multi-factor authentication, impose secure password policies, and confirm sessions using tokens using tokens that are stored in HTTP cookies.
+      Justification: Use of digital certificates ensures proper authentication
 
-  35. Elevation using Impersonation
+  36. Elevation using Impersonation
 
       Description: BitWarden Client may be able to impersonate the context of Account user in order to gain additional privilege.
 
       Justification: Apply strict RBAC to verify that BitWarden client operates within the permissions that are allowed to the authenticated user and that the user can't elevate its privliges.
-
-  36. Spoofing the BitWarden Client Process
-
-      Description: BitWarden Client may be spoofed by an attacker and this may lead to information disclosure by Account user. Consider using a standard authentication mechanism to identify the destination process.
-
-      Justification: Use TLS to authenticate both the client and the server to certify that only processes can establish communication.
-
-  37. Potential Lack of Input Validation for BitWarden Client
+      
+  39. Potential Lack of Input Validation for BitWarden Client
 
       Description: Data flowing across Account activity may be tampered with by an attacker.
 
       Justification: Apply strict input validation on all of the data flowing into the BitWarden Client by using a allowlist approach to verify inputs are accepted.
 
-  38. Potential Data Repudiation by BitWarden Client
+  40. Potential Data Repudiation by BitWarden Client
 
       Description: BitWarden Client claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
       Justification: Use secure logging and auditing mechanisms that record the source, timestamp, and a summary of all of the data recieved.
 
-  39. Data Flow Sniffing
+  41. Data Flow Sniffing
 
       Description: Data flowing across Account activity may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.
 
       Justification: Encrypt all of the data using TLS to make sure the confidentiality and integrity of data that flows across across acount activity.
 
-  40. Potential Process Crash or Stop for BitWarden Client
+  42. Potential Process Crash or Stop for BitWarden Client
 
       Description: BitWarden Client crashes, halts, stops or runs slowly; in all cases violating an availability metric.
 
       Justification: Use robust error handling and input validation to stop crashes caused by unexpected data.
 
-  41. Data Flow Account activity Is Potentially Interrupted
+  43. Data Flow Account activity Is Potentially Interrupted
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
-  42. Bitwarden client may be used to elevate privilege using remote code validation/execution
+  44. Bitwarden client may be used to elevate privilege using remote code validation/execution
 
       Description: Account user may be able to remotely execute code using Bitwarden
 
       Justification: Input validation and sanitization is used to disallow local code execution.
 
-  43. Elevation by Changing the Execution Flow in BitWarden Client 
+  45. Elevation by Changing the Execution Flow in BitWarden Client 
 
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
       Justification: Input validation and sanitization is used to ensure data is sanitized before entering the program flow.
 
-  45. Elevation Using Impersonation
+  46. Elevation Using Impersonation
 
       Description: BitWarden Client may be able to impersonate the context of Breach information processor in order to gain additional privilege.
 
       Justification: Use OAuth for managing identity authentication.
 
-  46. Spoofing of Source Data Store Database of breaches
+  47. Spoofing of Source Data Store Database of breaches
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to incorrect data delivered to Breach information processor. Consider using a standard authentication mechanism to identify the source data store.
 
-      Justification:  Use Bitwarden SHA-256 to ensure data is not tampered with or altered in any notion.
+      Justification:  Use of digital certificates ensures proper authentication
 
-  47. Weak Access Control for a Resource
+  48. Weak Access Control for a Resource
 
       Description: Improper data protection of Database of breaches can allow an attacker to read information not intended for disclosure. Review authorization settings.
 
       Justification:  Use ultrasonic scanners to secure information for the associated party, strengthening authentication.
 
-  48. Spoofing of the Account user External Destination Entity
+  49. Spoofing of the Account user External Destination Entity
 
       Description: Account user may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Account user. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use Bitwarden whitelisting to approve specific email addresses that are verified by domains to ensure verification.
 
-  49. External Entity Account user Potentially Denies Receiving Data
+  50. External Entity Account user Potentially Denies Receiving Data
 
       Description: Account user claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.
 
       Justification: Use automatic receipts to ensure confirmation from sensitive/critical data; that can be verified by the system and finance' encouraging authentication and verification.
 
-  50. Data Flow Breach answer Is Potentially Interrupted
+  51. Data Flow Breach answer Is Potentially Interrupted
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
       Justification: Use Bitwarden's VPNs for private communication and backups for high availability, incase of disruption.
 
-  51. Spoofing of Destination Data Store Database of breaches
+  52. Spoofing of Destination Data Store Database of breaches
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of Database of breaches. Consider using a standard authentication mechanism to identify the destination data store.
 
       Justification: Use HTTPS with strong TLS configs to secure data connections.
 
-  52. Potential Excessive Resource Consumption for Breach information processor or Database of breaches
+  53. Potential Excessive Resource Consumption for Breach information processor or Database of breaches
 
       Description: Does Breach information processor or Database of breaches take explicit steps to control resource consumption? 
 
       Justification: Use CDN to cache data closer to users that use them to reduce resource scaling. 
 
-  53. Elevation Using Impersonation
+  54. Elevation Using Impersonation
 
       Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
       Justification: Use Bitwarden's MFA to add a second layer of verfication, and RBAC to monitor all actions.
 
-  54. Spoofing the Breach Reporter External Entity 
+  55. Spoofing the Breach Reporter External Entity 
 
       Description: Breach Reporter may be spoofed by an attacker and this may lead to unauthorized access to Breach information processor. Consider using a standard authentication mechanism to identify the external entity.
 
       Justification: Use TLS to ensure that data confidentiality and integrity during transmission. 
 
-  55. Elevation Using Impersonation
+  56. Elevation Using Impersonation
 
        Description:	Breach information processor may be able to impersonate the context of Breach Reporter in order to gain additional privilege.
 
@@ -365,7 +353,7 @@
 
        Description:	Breach information processor may be spoofed by an attacker and this may lead to information disclosure by Breach Reporter.
 
-      Justification:	Use strong authentication, cryptographic signing, and secure communication channels to prevent spoofing of the breach information processor process.
+      Justification:	Use of digital certificates ensures proper authentication
       
   65. Data Flow Update confirmation Is Potentially Interrupted  
 
@@ -383,13 +371,13 @@
 
        Description:	Breach Reporter may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Breach Reporter. 
 
-       Justification:	Implement mutual authentication and use secure, encrypted communication channels to prevent spoofing of the breach reporter external destination entity.
+       Justification:	Use of digital certificates ensures proper authentication
 
    ## 4. Part deux
 
    Most of BitWarden's main functions can be summarized with the first of the DFDs where theres a external entity interacting with the BitWarden client, and that client sending data to a data store, that then sends the confirmation through the process back to the external entity. This produces vulernabilities in the data flow of the External Entity to the BitWarden client or from the BtWarden client to the data store. Nearly all the threats generated by the Threat modelling tool were marked as High Priority. 
    
-   After reading through all 66 threats the team determine that the Cross-site forgery threat was unnecessary to mitigate as the BitWarden client uses API to pull data from data stores and not a browser. The threats 11, 30, 43, and 55 were removed leaving 62 threats.  
+   After reading through all 66 threats the team determine that the Cross-site forgery threat was unnecessary to mitigate as the BitWarden client uses API to pull data from data stores and not a browser. The threats 11, 30, 43, and 55 were removed leaving 62 threats. The Spoofing of BitWarden client process was repeated 3 times in the threat report and so 2 were removed as they all covered the same threat and mitigation, leaving 60 threats.   
 
    ### 4.1 Gaps
 
