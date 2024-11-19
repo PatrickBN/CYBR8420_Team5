@@ -248,19 +248,19 @@
 
       Description: Account user may be able to remotely execute code using Bitwarden
 
-      Justification: Use Web Application Firewalls like Azure WAF to monitor and block suspicious actions.
+      Justification: Use Web Application Firewalls like Bitwarden's Azure WAF to monitor and block suspicious actions.
 
   42. Elevation by Changing the Execution Flow in BitWarden Client 
 
       Description: An attacker may pass data into BitWarden Client in order to change the flow of program execution within BitWarden Client to the attacker's choosing.
 
-      Justification: Use crytographic signatures to verify that the code has not been exploited or tampered with; ensuring integrity.
+      Justification: Use Bitwarden's crytographic signatures to verify that the code has not been exploited or tampered with; ensuring integrity.
 
   43. Cross Site Request Forgery
 
       Description: Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting. The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations.
 
-      Justification: Use CAPTCHA for forcing human interaction, ensuring that it is a legitimate user and not an automated bot.
+      Justification: Use Bitwarden CAPTCHA for forcing human interaction, ensuring that it is a legitimate user and not an automated bot.
 
   44. Elevation Using Impersonation
 
@@ -272,7 +272,7 @@
 
       Description: Database of breaches may be spoofed by an attacker and this may lead to incorrect data delivered to Breach information processor. Consider using a standard authentication mechanism to identify the source data store.
 
-      Justification:  Use SHA-256 to ensure data is not tampered with or altered in any notion.
+      Justification:  Use Bitwarden SHA-256 to ensure data is not tampered with or altered in any notion.
 
   46. Weak Access Control for a Resource
 
@@ -284,7 +284,7 @@
 
       Description: Account user may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of Account user. Consider using a standard authentication mechanism to identify the external entity.
 
-      Justification: Use whitelisting to approve specific email addresses that are verified by domains to ensure verification.
+      Justification: Use Bitwarden whitelisting to approve specific email addresses that are verified by domains to ensure verification.
 
   48. External Entity Account user Potentially Denies Receiving Data
 
@@ -296,7 +296,7 @@
 
       Description: An external agent interrupts data flowing across a trust boundary in either direction.
 
-      Justification: Use VPNs for private communication and backups for high availability, incase of disruption.
+      Justification: Use Bitwarden's VPNs for private communication and backups for high availability, incase of disruption.
 
   50. Spoofing of Destination Data Store Database of breaches
 
@@ -314,7 +314,7 @@
 
       Description: Breach information processor may be able to impersonate the context of BitWarden Client in order to gain additional privilege.
 
-      Justification: Use MFA to add a second layer of verfication, and RBAC to monitor all actions.
+      Justification: Use Bitwarden's MFA to add a second layer of verfication, and RBAC to monitor all actions.
 
   53. Spoofing the Breach Reporter External Entity 
 
