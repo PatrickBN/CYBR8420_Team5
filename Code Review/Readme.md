@@ -6,3 +6,6 @@ The list of CWEs we are concerned about:
 4. CWE-522: Insufficiently Protected Credentials (Secure Code)
 5. CWE-269: Improper Privilege Management (Secure Code)
 6. CWE-267: Privilege Defined With Unsafe Actions (Secure Payments)
+7. CWE-327: Use of a Broken or Risky Cryptographic Algorithm (could be any really)
+8. CWE-326: Inadequate Encryption Strength (could be any really)
+ 
