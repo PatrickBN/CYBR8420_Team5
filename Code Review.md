@@ -11,6 +11,10 @@ Our code review strategy began with a scenario based approach using the Use Case
 
 ## 3. Automated Scanning and Tools used
 
+3.1 Aikdo Security
+* Summary: Akido security ran an automated code review over the entire BitWarden repository, as a feature of Akido it tries to recogonize false positives and cut them out of the final view of issues to simplify reviewing the code review. The total amount of issues Akido was able to find was 89, with about 50 of those being cut out by Akido as false positives. However, it missed a lot of false positives and really that number should be closer to 70, leaving only 19 or so actual issues. Most of these issues were low level or medium level issues, and the one critical issue was an out of date component.  
+* Results:
+
 ## 4. Common Weakness Enumerations
 
 ### 4.1 CWE's selected
