@@ -12,42 +12,42 @@ The code review main project file
 ### 4.1 CWE's selected
    
 * CWE-200: Exposure of Sensitive Information to an Unauthorized Actor
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
       
 * CWE-267: Privilege Defined With Unsafe Actions
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
       
 * CWE-269: Improper Privilege Management
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
       
 * CWE-290: Authentication Bypass by Spoofing
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
     
 * CWE-326: Inadequate Encryption Strength
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
       
 * CWE-327: Use of a Broken or Risky Cryptographic Algorithm
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
       
 * CWE-522: Insufficiently Protected Credentials
-    * Files Analyzed:
+    * Files Manually Analyzed:
 
     * Automated Scan Results:
     
 * CWE-603: Use of Client-Side Authentication
-    * Files Analyzed:
+    * Files Manually Analyzed:
       
     * Automated Scan Results:
 
