@@ -55,7 +55,10 @@ Our code review strategy began with a scenario based approach using the Use Case
     
 * CWE-603: Use of Client-Side Authentication
     * Files Manually Analyzed:
-      
+         * [login-via-auth-request-v1.component.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/login-via-auth-request-v1.component.ts)
+         * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
+         * [auth-request.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts)
+           
     * Automated Scan Results:
 
 
