@@ -5,6 +5,8 @@ The code review main project file
 
 ## 2. Our Review Strategy
 
+Our code review strategy began with a scenario based approach using the Use Cases we have developed previously to identify weak areas to focus on. We then presented Common Weakness Enumerations to group and collectively decided on which CWE's fit best with the use cases and the BitWarden application. These CWE's were then delegated to the team members to focus on individually through manual review of the code. Automated review using code review tools was done by each member and then the results are compared to the CWE that team member is investigating. 
+
 ## 3. Automated Scanning and Tools used
 
 ## 4. Common Weakness Enumerations
