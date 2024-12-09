@@ -38,9 +38,13 @@ Our code review strategy began with a scenario based approach using the Use Case
       
 * [CWE-269: Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html) 
     * Files Manually Analyzed:
-         * [two-factor-auth.componet.ts](https://github.com/bitwarden/clients/blob/main/apps/browser/src/auth/popup/two-factor-auth.component.ts)
+         * [two-factor.component.ts](https://github.com/connerbraley/clients/blob/9214273a9b059272ebe48013e263cbd31f79f973/libs/angular/src/auth/components/two-factor.component.ts#L148)
+         * [token.service.spec.ts](https://github.com/connerbraley/clients/blob/329c97d25ebb35515cfe757244533d24c0ff9179/libs/common/src/auth/services/token.service.spec.ts#L82)
+         * [nativeMessaging.background.ts](https://github.com/connerbraley/clients/blob/329c97d25ebb35515cfe757244533d24c0ff9179/libs/common/src/auth/services/token.service.spec.ts#L82)
+     * Manual Scan Results:
+         * For this first file the componet handles two factor authentication, authenticating tokens, and password resetting. When it comes to privilege escelation concerns th
+    * Automated Scan Results: The A.I. automated scans for Aikido Security, Deepscan.io and Codacy did not give me issues relating to this CWE.
 
-    * Automated Scan Results:
       
 * [CWE-290: Authentication Bypass by Spoofing](https://cwe.mitre.org/data/definitions/290.html)
     * Files Manually Analyzed:
