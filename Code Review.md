@@ -38,6 +38,7 @@ Our code review strategy began with a scenario based approach using the Use Case
       
 * [CWE-269: Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html) 
     * Files Manually Analyzed:
+         * [two-factor-auth.componet.ts](https://github.com/bitwarden/clients/blob/main/apps/browser/src/auth/popup/two-factor-auth.component.ts)
 
     * Automated Scan Results:
       
