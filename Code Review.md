@@ -38,11 +38,12 @@ Our code review strategy began with a scenario based approach using the Use Case
       
 * [CWE-269: Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html) 
     * Files Manually Analyzed:
-         * [two-factor.component.ts](https://github.com/connerbraley/clients/blob/9214273a9b059272ebe48013e263cbd31f79f973/libs/angular/src/auth/components/two-factor.component.ts#L148)
-         * [token.service.spec.ts](https://github.com/connerbraley/clients/blob/329c97d25ebb35515cfe757244533d24c0ff9179/libs/common/src/auth/services/token.service.spec.ts#L82)
-         * [nativeMessaging.background.ts](https://github.com/connerbraley/clients/blob/329c97d25ebb35515cfe757244533d24c0ff9179/libs/common/src/auth/services/token.service.spec.ts#L82)
+         *Files Manually Analyzed:
+         * [auth-request-api.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request-api.service.ts)
+         * [approve.command.ts](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-cli/src/admin-console/device-approval/approve.command.ts)
+         * [deny.command.ts](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-cli/src/admin-console/device-approval/deny.command.ts)
      * Manual Scan Results:
-         * For this first file the componet handles two factor authentication, authenticating tokens, and password resetting. When it comes to privilege escelation concerns th
+         * The assurance case file this relates to is Bitwarden minimizes unauthorized access to unauthorized users. These files each deal with a way a member could elevate their privileges that they are not granted. For the first file, it is responsible for making API calls that are related to authentication requests. We are able to see that there is a difference in each request. One is [postAdminAuthRequest](https://github.com/bitwarden/clients/blob/f7b81231bccc1803ed7c1eda8dc3d6291f6f8eb2/libs/auth/src/common/services/auth-request/auth-request-api.service.ts#L38) and the other is [postAuthRequest](https://github.com/bitwarden/clients/blob/f7b81231bccc1803ed7c1eda8dc3d6291f6f8eb2/libs/auth/src/common/services/auth-request/auth-request-api.service.ts#L55). This shows that their is a difference from an admin to a standard BitWarden client. This next file is handling the approval of device authorization requests for an organization. In this file a user can manage passwords [here](9https://github.com/bitwarden/clients/blob/f7b81231bccc1803ed7c1eda8dc3d6291f6f8eb2/bitwarden_license/bit-cli/src/admin-console/device-approval/approve.command.ts#L34). In the last file it is checking if a user has the proper privilege to manage authorization requests [here](https://github.com/bitwarden/clients/blob/0906c503e1f35d264d5169df178dd5a46a39a9b7/bitwarden_license/bit-cli/src/admin-console/device-approval/deny.command.ts#L33).
     * Automated Scan Results: The A.I. automated scans for Aikido Security, Deepscan.io and Codacy did not give me issues relating to this CWE.
 
       
