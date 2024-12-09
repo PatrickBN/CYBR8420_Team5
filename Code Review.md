@@ -28,12 +28,15 @@ Our code review strategy began with a scenario based approach using the Use Case
 
     * Automated Scan Results:
       
-* CWE-267: Privilege Defined With Unsafe Actions
+* [CWE-267: Privilege Defined With Unsafe Actions](https://cwe.mitre.org/data/definitions/267.html)
     * Files Manually Analyzed:
-
-    * Automated Scan Results:
+         * [web-provider.service.ts](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts)
+         * [member-access-report.response.ts](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts)
+         * [provider-permissions.guard.ts](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/guards/provider-permissions.guard.ts)
+    * Manual Scan Results: The use case file these particular code reviews involed is insider employee abuse. The files reviewed all pertained to priviledged information. The first in the code manages organizations and providers accounts. These methods handle [adding](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L36), [creating](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L74),and [detaching](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L82). The second code refers to user access and member details. It displays [usernames](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L42), [emails](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L43), [two factor enabled](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L44), [account recovery](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L45) and more privileged information. The last code that was reviewed was a guard that checks if the logged-in user has the appropriate [permissions](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/guards/provider-permissions.guard.ts#L56). 
+    * Automated Scan Results: The A.I. automated scans for Aikido Security, Deepscan.io and Codacy did not give me issues relating to this CWE.
       
-* CWE-269: Improper Privilege Management
+* CWE-269: Improper Privilege Management 
     * Files Manually Analyzed:
 
     * Automated Scan Results:
@@ -46,7 +49,7 @@ Our code review strategy began with a scenario based approach using the Use Case
     * Manual Scan Results: The beginning of the analysis start with the clients/apps/desktop/src/auth folder to find files related to the authentication process. The files identified were related to the auth request in relation to login, authentication approval, and the authentication request service. The use case this follows is the login use case so these files seemed most relevant to the scenario based approach we were using. The first file listed is where we find the authentication approval [Here](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/login-via-auth-request-v1.component.ts#L86). In the second file we find the parameters for authentication [Here](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts#L51) which shows the requirements for authentication, and in the last file we get the asyncronous approve or deny request for authentication [Here](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts#L87). These are asyncronous processes that are difficult to spoof as shown in the last file they require master key decryption from outside the client in order to validate the authentication.
     * Automated Scan Results: (1) The Akido scan did not find any issues relating to the CWE. (2) The deepscan.io scan did not find any issues relating to the CWE.
     
-* CWE-326: Inadequate Encryption Strength
+* [CWE-326: Inadequate Encryption Strength](https://cwe.mitre.org/data/definitions/326.html)
     * Files Manually Analyzed:
 
     * Automated Scan Results:
