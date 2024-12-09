@@ -16,7 +16,7 @@ Our code review strategy began with a scenario based approach using the Use Case
 
 
 3.2 Deepscan.io
-* Summary: The Deepscan.io scan found around 184 issues, a majority of which were issues claiming that a null value was used instead of an integer, however, on further review in all cases these null values were handled correctly and these were false positives. 
+* Summary: The Deepscan.io scan found around 184 issues, a majority of which were issues claiming that a null value was used instead of an integer, however, on further review in all cases these null values were handled correctly and these were false positives. The second most common issue was the constant condition issue which is a result of BitWarden hiding the secrets required to maintain secure code. The rest of the issues are uncommon with only a few instances of each issue and most low priority. 
 
 
 ## 4. Common Weakness Enumerations
@@ -44,7 +44,7 @@ Our code review strategy began with a scenario based approach using the Use Case
          * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
          * [auth-request.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts)
 
-    * Automated Scan Results:
+    * Automated Scan Results: (1) The Akido scan did not find any issues relating to the CWE. (2) The deepscan.io scan did not find any issues relating to the CWE.
     
 * CWE-326: Inadequate Encryption Strength
     * Files Manually Analyzed:
@@ -67,7 +67,7 @@ Our code review strategy began with a scenario based approach using the Use Case
          * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
          * [auth-request.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts)
            
-    * Automated Scan Results:
+    * Automated Scan Results: (1) The Akido scan did not find any issues relating to the CWE. (2) The deepscan.io scan did not find any issues relating to the CWE.
 
 
 
