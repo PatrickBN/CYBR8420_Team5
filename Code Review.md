@@ -67,7 +67,7 @@ Our code review strategy began with a scenario based approach using the Use Case
          * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
          * [auth-request.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts)
   * Manual Scan Results: Similar to the reasoning for CWE-290 we start with the authentication files in the BitWarden repo. The most important of these files for this CWE is the auth-request.service.ts file which shows [Here](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts#L51) and [Here](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request.service.ts#L105) the service requiring a master key that comes from outside the client to approve authentication. This shows that the authentication isn't occuring client side.
-    * Automated Scan Results: (1) The Akido scan did not find any issues relating to the CWE. (2) The deepscan.io scan did not find any issues relating to the CWE.
+  * Automated Scan Results: (1) The Akido scan did not find any issues relating to the CWE. (2) The deepscan.io scan did not find any issues relating to the CWE.
 
 
 
