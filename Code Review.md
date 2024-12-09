@@ -16,7 +16,7 @@ Our code review strategy began with a scenario based approach using the Use Case
 * Results:
 
 3.2 Deepscan.io
-* Summary:
+* Summary: The Deepscan.io scan found around 184 issues, a majority of which were issues claiming that a null value was used instead of an integer, however, on further review in all cases these null values were handled correctly and these were false positives. 
 * Results:
 
 ## 4. Common Weakness Enumerations
