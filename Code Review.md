@@ -25,6 +25,8 @@ Our code review strategy began with a scenario based approach using the Use Case
    
 * [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
     * Files Manually Analyzed:
+ 
+    * * Manual Scan Results:
 
     * Automated Scan Results:
       
