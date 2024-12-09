@@ -30,7 +30,7 @@ Our code review strategy began with a scenario based approach using the Use Case
          * [auth-request-api.service.ts](https://github.com/bitwarden/clients/blob/main/libs/auth/src/common/services/auth-request/auth-request-api.service.ts)
     * Manual Scan Results: For this code review, the idea revolves around information exploitation. The **username randomizer** allows each username to be randomly genrated using a predefined set of words. It operates using [**WordsRequest**](https://github.com/bitwarden/clients/blob/02c65fd1b86839ec2de831488afc65b8f3efce9b/libs/tools/generator/core/src/engine/username-randomizer.ts#L7) to import the './types' file, and is then declared using [**CredentialGenerator**](https://github.com/bitwarden/clients/blob/02c65fd1b86839ec2de831488afc65b8f3efce9b/libs/tools/generator/core/src/engine/username-randomizer.ts#L10). Finally [**Generated algorithms**](https://github.com/bitwarden/clients/blob/02c65fd1b86839ec2de831488afc65b8f3efce9b/libs/tools/generator/core/src/engine/username-randomizer.ts#L12) and [**randomWords**](https://github.com/bitwarden/clients/blob/02c65fd1b86839ec2de831488afc65b8f3efce9b/libs/tools/generator/core/src/engine/username-randomizer.ts#L17) are utilized to collect from a random data source for randomized data; allowing customizable options from external data sources.
 
-    * Automated Scan Results: The scans for for Aikido Security, Deepscan.io and Codacy did not give me issues relating to this CWE.
+    * Automated Scan Results: The scans for for Codacy, Aikido Security, and Deepscan.io gave me no issues relating to this CWE.
       
 * [CWE-267: Privilege Defined With Unsafe Actions](https://cwe.mitre.org/data/definitions/267.html)
     * Files Manually Analyzed:
