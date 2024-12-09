@@ -23,7 +23,7 @@ Our code review strategy began with a scenario based approach using the Use Case
 
 ### 4.1 CWE's selected
    
-* CWE-200: Exposure of Sensitive Information to an Unauthorized Actor
+* [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
     * Files Manually Analyzed:
 
     * Automated Scan Results:
@@ -36,12 +36,12 @@ Our code review strategy began with a scenario based approach using the Use Case
     * Manual Scan Results: The use case file these particular code reviews involed is insider employee abuse. The files reviewed all pertained to priviledged information. The first in the code manages organizations and providers accounts. These methods handle [adding](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L36), [creating](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L74),and [detaching](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/services/web-provider.service.ts#L82). The second code refers to user access and member details. It displays [usernames](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L42), [emails](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L43), [two factor enabled](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L44), [account recovery](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/tools/reports/member-access-report/response/member-access-report.response.ts#L45) and more privileged information. The last code that was reviewed was a guard that checks if the logged-in user has the appropriate [permissions](https://github.com/bitwarden/clients/blob/main/bitwarden_license/bit-web/src/app/admin-console/providers/guards/provider-permissions.guard.ts#L56). 
     * Automated Scan Results: The A.I. automated scans for Aikido Security, Deepscan.io and Codacy did not give me issues relating to this CWE.
       
-* CWE-269: Improper Privilege Management 
+* [CWE-269: Improper Privilege Management](https://cwe.mitre.org/data/definitions/269.html) 
     * Files Manually Analyzed:
 
     * Automated Scan Results:
       
-* CWE-290: Authentication Bypass by Spoofing
+* [CWE-290: Authentication Bypass by Spoofing](https://cwe.mitre.org/data/definitions/290.html)
     * Files Manually Analyzed:
          * [login-via-auth-request-v1.component.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/login-via-auth-request-v1.component.ts)
          * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
@@ -54,17 +54,17 @@ Our code review strategy began with a scenario based approach using the Use Case
 
     * Automated Scan Results:
       
-* CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+* [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
     * Files Manually Analyzed:
 
     * Automated Scan Results:
       
-* CWE-522: Insufficiently Protected Credentials
+* [CWE-522: Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
     * Files Manually Analyzed:
 
     * Automated Scan Results:
     
-* CWE-603: Use of Client-Side Authentication
+* [CWE-603: Use of Client-Side Authentication](https://cwe.mitre.org/data/definitions/603.html)
     * Files Manually Analyzed:
          * [login-via-auth-request-v1.component.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/login-via-auth-request-v1.component.ts)
          * [desktop-login-approval-component.service.spec.ts](https://github.com/bitwarden/clients/blob/main/apps/desktop/src/auth/login/desktop-login-approval-component.service.spec.ts)
