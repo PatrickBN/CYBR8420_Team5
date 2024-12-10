@@ -1,4 +1,3 @@
-The code review main project file
 # Code Review
 
 ## 1. Introduction
