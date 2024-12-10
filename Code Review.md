@@ -94,4 +94,6 @@ Our code review strategy began with a scenario based approach using the Use Case
 
 ## 6. Open source contributions
 
+Given the advanced development of BitWarden the amount of significant improvement we could offer in terms of coding support or design changes is quite limited, however, throughout this project we have accrued a significant amount of documentation and support surrounding the use of BitWarden with various use cases, as well assurance cases. Documentation provided by this project could help other project managers when deciding which OSS to use by reviewing the use cases and assurance cases from this project and matching it to potential use cases and assurance cases of their own. 
+
 ## 7. Reflections
