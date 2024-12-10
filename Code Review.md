@@ -69,9 +69,9 @@ Our code review strategy began with a scenario based approach using the Use Case
       
 * [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
     * Files Manually Analyzed:
-          * [key.service.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/key-management/src/key.service.ts)
-          * [encrypt.worker.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/common/src/platform/services/cryptography/encrypt.worker.ts)
-          * [after-pack.js](https://github.com/PatrickBN/bitwarden/blob/main/apps/desktop/scripts/after-pack.js)
+       * [key.service.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/key-management/src/key.service.ts)
+       * [encrypt.worker.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/common/src/platform/services/cryptography/encrypt.worker.ts)
+       * [after-pack.js](https://github.com/PatrickBN/bitwarden/blob/main/apps/desktop/scripts/after-pack.js)
  
     *  Manual Scan Results:
           * key.service.ts - The hard-coded value "bitwarden-send" is used as key. Including unencrypted hard-coded authentication credentials in source code is dangerous because the credentials may be easily discovered. For example, the code may be open source, or it may be leaked or accidentally revealed, making the credentials visible to an attacker. This, in turn, might enable them to gain unauthorized access, or to obtain privileged information.
