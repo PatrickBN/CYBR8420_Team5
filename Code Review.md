@@ -100,8 +100,35 @@ Our code review strategy began with a scenario based approach using the Use Case
 
 ## 5. Summary
 
+Using a scenario-based approach we decided on 8 CWE that met with our use cases while trying to cut down on the overlap that some CWE might have with each other.
+* CWE-200: Exposure of Sensitive Information to an Unauthorized Actor
+* CWE-267: Privilege Defined With Unsafe Actions
+* CWE-269: Improper Privilege Management
+* CWE-290: Authentication Bypass by Spoofing
+* CWE-326: Inadequate Encryption Strength
+* CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+* CWE-522: Insufficiently Protected Credentials
+* CWE-603: Use of Client-Side Authentication
+  
+Overall the main security features we were looking at with these CWE’s were:
+
+1.	Authentication
+2.	Encryption
+3.	Privilege Escalation
+4.	Spoofing
+
+After examining the source code on the Github repository we found that BitWarden typically has excellent security controls in place. However, we found that, in CWE-327, there are instances where BitWarden uses hard coded authentication credentials, the impact of which is unknown to us. As for the rest of the CWE’s we believe we have strong justification for the security of this software:
+
+1.	Authentication – The authentication controls are strong and aside from the “bitwarden-send” authentication found in key.service.ts we found no significant indication of improper authentication.
+2.	Encryption – We found that encryption uses strong cryptographic controls with many rounds of password hashing to reduce the threat of brute force attacks.
+3.	Privilege Escalation – We found that the controls in authentication, along with BitWarden differentiating between admin and non-admin authentication requests provide strong reason to trust a privileged user.
+4.	Spoofing – The encryption and authentication procedures require master key combos that reduce the likelihood of spoofing.
+
+
 ## 6. Open source contributions
 
 Given the advanced development of BitWarden the amount of significant improvement we could offer in terms of coding support or design changes is quite limited, however, throughout this project we have accrued a significant amount of documentation and support surrounding the use of BitWarden with various use cases, as well assurance cases. Documentation provided by this project could help other project managers when deciding which OSS to use by reviewing the use cases and assurance cases from this project and matching it to potential use cases and assurance cases of their own. 
 
 ## 7. Reflections
+
+For this project our group had some of the best teamwork and collaboration of any of the previous deliverables. We had several meetings where we discussed the project, and everyone had input on the CWE’s choice and rationale for each CWE chosen. When compared to the past assignments this one had the most communication and was well organized in who was responsible for what and when work was to be done. As a team we have grown and improved at each step, and we have reached a solid working environment as a group. Overall, there were no significant issues with this assignment, and we were able to complete the assignment and project as a whole without any significant problems.
