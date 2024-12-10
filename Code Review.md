@@ -69,9 +69,10 @@ Our code review strategy began with a scenario based approach using the Use Case
       
 * [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
     * Files Manually Analyzed:
-    * [key.service.ts] (https://github.com/PatrickBN/bitwarden/blob/main/libs/key-management/src/key.service.ts)
-    * [encrypt.worker.ts] (https://github.com/PatrickBN/bitwarden/blob/main/libs/common/src/platform/services/cryptography/encrypt.worker.ts)
-    * [after-pack.js] (https://github.com/PatrickBN/bitwarden/blob/main/apps/desktop/scripts/after-pack.js)
+    * [key.service.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/key-management/src/key.service.ts)
+    * [encrypt.worker.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/common/src/platform/services/cryptography/encrypt.worker.ts)
+    * [after-pack.js](https://github.com/PatrickBN/bitwarden/blob/main/apps/desktop/scripts/after-pack.js)
+
 
     * Automated Scan Results:
       
