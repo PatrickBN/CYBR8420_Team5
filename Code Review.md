@@ -72,9 +72,13 @@ Our code review strategy began with a scenario based approach using the Use Case
     * [key.service.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/key-management/src/key.service.ts)
     * [encrypt.worker.ts](https://github.com/PatrickBN/bitwarden/blob/main/libs/common/src/platform/services/cryptography/encrypt.worker.ts)
     * [after-pack.js](https://github.com/PatrickBN/bitwarden/blob/main/apps/desktop/scripts/after-pack.js)
+ 
+    *  Manual Scan Results:
+    * key.service.ts - The hard-coded value "bitwarden-send" is used as key. Including unencrypted hard-coded authentication credentials in source code is dangerous because the credentials may be easily discovered. For example, the code may be open source, or it may be leaked or accidentally revealed, making the credentials visible to an attacker. This, in turn, might enable them to gain unauthorized access, or to obtain privileged information.
+    * encrypt.worker.ts - Invocation of method with name may dispatch to unexpected target and cause an exception. JavaScript makes it easy to look up object properties dynamically at runtime. In particular, methods can be looked up by name and then called. However, if the method name is user-controlled, an attacker could choose a name that makes the application invoke an unexpected method, which may cause a runtime exception. If this exception is not handled, it could be used to mount a denial-of-service attack.
+    * after-pack.js - This shell command depends on an uncontrolled absolute path. Dynamically constructing a shell command with values from the local environment, such as file paths, may inadvertently change the meaning of the shell command. Such changes can occur when an environment value contains characters that the shell interprets in a special way, for instance quotes and spaces. This can result in the shell command misbehaving, or even allowing a malicious user to execute arbitrary commands on the system.
 
-
-    * Automated Scan Results:
+    * Automated Scan Results: Akido Deepscan.io scans did not find any issues relating to the CWE-327.
       
 * [CWE-522: Insufficiently Protected Credentials](https://cwe.mitre.org/data/definitions/522.html)
     * Files Manually Analyzed: 
