@@ -1,4 +1,4 @@
-## Use Case User Logon
+## Use Case Secure Payments
 [Link to SSE document](https://github.com/PatrickBN/CYBR8420_Team5/blob/main/Software%20Security%20Engineering.md)
 
 ### Description:
